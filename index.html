@@ -11,8 +11,10 @@
         .container { width: 100%; max-width: 450px; text-align: center; }
         
         /* Header */
-        .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; margin-bottom: 10px; }
-        .logo { display: flex; align-items: center; gap: 8px; font-weight: bold; font-size: 18px; color: #38bdf8; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; margin-bottom: 10px; }
+        .logo-box { display: flex; align-items: center; gap: 10px; }
+        .logo-img { height: 45px; width: auto; border-radius: 8px; }
+        .logo-text { font-weight: bold; font-size: 18px; color: #38bdf8; }
         .header-btns { display: flex; gap: 8px; }
         .btn-sm { background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 6px 12px; border-radius: 20px; font-size: 12px; text-decoration: none; cursor: pointer; }
         .btn-cyan { background: #00d2ff; color: #000; font-weight: bold; }
@@ -48,9 +50,12 @@
 <body>
 
     <div class="container">
-        <!-- Header -->
+        <!-- Header with Logo -->
         <div class="header">
-            <
+            <div class="logo-box">
+                <img src="logo.png" alt="فلاي مسار" class="logo-img">
+                <span class="logo-text">FLY MASAR</span>
+            </div>
             <div class="header-btns">
                 <span class="btn-sm"><i class="fa-solid fa-globe"></i> العربية</span>
                 <span class="btn-sm btn-cyan">تسجيل الدخول</span>
@@ -64,10 +69,7 @@
         <!-- Quotes Section -->
         <div class="quote-box">
             <div class="quote-title"> نصائح وحكم السفر</div>
-            <div class="quote-card">"السفر يعلمك التواضع، فهو يريك كم هو صغير الحجم المكان الذي تشغله من هذا العا<div class="logo">
-                <i class="fa-solid fa-plane-up"></i>
-                <span>FLY MASAR</span>
-            </div>لم."</div>
+            <div class="quote-card">"السفر يعلمك التواضع، فهو يريك كم هو صغير الحجم المكان الذي تشغله من هذا العالم."</div>
             <div class="quote-card">"استثمر في سفرياتك، فالذكريات هي الكنز الوحيد الذي لا ينتهي أبداً."</div>
         </div>
 
