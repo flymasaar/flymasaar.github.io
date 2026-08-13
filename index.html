@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فلاي مسار | FLY MASAR</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0b1325; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 15px; }
+        .container { width: 100%; max-width: 450px; text-align: center; }
+        
+        /* Header */
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; margin-bottom: 10px; }
+        .logo { display: flex; align-items: center; gap: 8px; font-weight: bold; font-size: 18px; color: #38bdf8; }
+        .header-btns { display: flex; gap: 8px; }
+        .btn-sm { background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 6px 12px; border-radius: 20px; font-size: 12px; text-decoration: none; cursor: pointer; }
+        .btn-cyan { background: #00d2ff; color: #000; font-weight: bold; }
+
+        /* Main Banner */
+        .hero-title { font-size: 22px; margin: 15px 0 8px; font-weight: 800; }
+        .hero-sub { font-size: 13px; color: #94a3b8; margin-bottom: 20px; line-height: 1.4; }
+
+        /* Quotes Box */
+        .quote-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 15px; text-align: right; margin-bottom: 25px; }
+        .quote-title { color: #f59e0b; font-size: 12px; margin-bottom: 8px; font-weight: bold; }
+        .quote-card { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 12px; margin-bottom: 8px; font-size: 12px; color: #cbd5e1; font-style: italic; line-height: 1.5; }
+
+        /* Category Tabs Grid */
+        .tabs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
+        .tab-card { background: #111d33; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 15px 10px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: #fff; font-size: 13px; font-weight: 600; transition: 0.3s; }
+        .tab-card.active { background: #00d2ff; color: #000; }
+        .tab-card i { font-size: 22px; }
+
+        /* Links Section */
+        .section-title { text-align: right; font-size: 14px; color: #94a3b8; margin-bottom: 12px; font-weight: 600; }
+        .links-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 80px; }
+        .action-btn { display: flex; align-items: center; justify-content: space-between; background: #111d33; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 14px 16px; color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; }
+        .action-btn i.main-ic { font-size: 18px; color: #00d2ff; width: 25px; }
+
+        /* Bottom Nav */
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #0b1325; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-around; padding: 10px 0; }
+        .nav-item { color: #64748b; text-decoration: none; font-size: 10px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+        .nav-item.active { color: #00d2ff; }
+        .nav-item i { font-size: 18px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <i class="fa-solid fa-plane-up"></i>
+                <span>FLY MASAR</span>
+            </div>
+            <div class="header-btns">
+                <span class="btn-sm"><i class="fa-solid fa-globe"></i> العربية</span>
+                <span class="btn-sm btn-cyan">تسجيل الدخول</span>
+            </div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="hero-title">اعثر على أفضل سعر لرحلتك القادمة ✈️</h1>
+        <p class="hero-sub">اقرن أسعار المئات من الشركات وحجوزات الطيران والتوصيل في ثوانٍ معدودة</p>
+
+        <!-- Quotes Section -->
+        <div class="quote-box">
+            <div class="quote-title"> نصائح وحكم السفر</div>
+            <div class="quote-card">"السفر يعلمك التواضع، فهو يريك كم هو صغير الحجم المكان الذي تشغله من هذا العالم."</div>
+            <div class="quote-card">"استثمر في سفرياتك، فالذكريات هي الكنز الوحيد الذي لا ينتهي أبداً."</div>
+        </div>
+
+        <!-- Service Tabs Grid -->
+        <div class="tabs-grid">
+            <a href="https://aviasales.tpk.lv/921Eh2WK" target="_blank" class="tab-card active">
+                <i class="fa-solid fa-plane"></i>
+                <span>الطيران</span>
+            </a>
+            <a href="https://aviasales.tpk.lv/921Eh2WK" target="_blank" class="tab-card">
+                <i class="fa-solid fa-hotel"></i>
+                <span>الفنادق</span>
+            </a>
+            <a href="https://kiwitaxi.tpk.lv/uDEkaAJd" target="_blank" class="tab-card">
+                <i class="fa-solid fa-car"></i>
+                <span>السيارات</span>
+            </a>
+        </div>
+
+        <!-- Links List -->
+        <div class="section-title">خدمات فلاي مسار المباشرة</div>
+        <div class="links-list">
+            <a href="https://aviasales.tpk.lv/921Eh2WK" target="_blank" class="action-btn">
+                <i class="fa-solid fa-magnifying-glass main-ic"></i>
+                <span>البحث عن أفضل أسعار الطيران</span>
+                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #475569;"></i>
+            </a>
+
+            <a href="https://kiwitaxi.tpk.lv/uDEkaAJd" target="_blank" class="action-btn">
+                <i class="fa-solid fa-taxi main-ic"></i>
+                <span>حجز التاكسي والمواصلات بين المطارات</span>
+                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #475569;"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i>الرئيسية</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-heart"></i>المفضلة</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-tag"></i>العروض</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-newspaper"></i>المقالات</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>حسابي</a>
+    </div>
+
+</body>
+</html>
