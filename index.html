@@ -37,13 +37,13 @@
         .section-header i { font-size: 20px; color: var(--primary-color); }
         .section-header h3 { font-size: 18px; font-weight: 700; }
 
+        /* تنسيق مخصص للحاوية التي تعني بعرض الـ Widget */
+        .widget-wrapper { width: 100%; min-height: 180px; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+
         .grid-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
         .link-card { display: flex; align-items: center; gap: 12px; padding: 15px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: var(--text-color); font-weight: 600; font-size: 14px; transition: all 0.3s; }
         .link-card:hover { border-color: var(--primary-color); background: #ffffff; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .link-card i { font-size: 20px; color: var(--primary-color); width: 30px; text-align: center; }
-        
-        .main-btn { background: #eef6ff; border-color: #0066cc; padding: 20px; justify-content: center; font-size: 16px; font-weight: 700; display: flex; text-decoration: none; border-radius: 8px; color: var(--text-color); transition: 0.3s; margin-bottom: 15px;}
-        .main-btn:hover { background: #0066cc; color: #fff; }
 
         footer { background: #111827; color: #9ca3af; padding: 40px 20px; margin-top: 40px; text-align: center; font-size: 13px; }
         .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #ffffff; display: flex; justify-content: space-around; padding: 10px 0; box-shadow: 0 -2px 10px rgba(0,0,0,0.08); z-index: 1000; }
@@ -64,21 +64,21 @@
 
     <section class="hero">
         <h2>اكتشف العالم بأفضل الأسعار ✈️</h2>
-        <p>اختر الخدمة التي تريدها وسنقوم بتوجيهك مباشرة لأفضل المنصات للحجز الآمن والمضمون</p>
+        <p>ابحث عن رحلات الطيران مباشرة أو اختر من أفضل خدمات الحجز الموثوقة</p>
     </section>
 
     <div class="container">
 
-        <!-- قسم الطيران -->
+        <!-- قسم الطيران مع كود الـ Widget التفاعلي -->
         <div class="section-card" id="flights">
             <div class="section-header">
                 <i class="fa-solid fa-plane"></i>
-                <h3>حجز تذاكر الطيران</h3>
+                <h3>ابحث واحجز أرخص رحلات الطيران</h3>
             </div>
-            <a href="https://aviasales.tpm.li/X4PkHXUn" target="_blank" class="main-btn">
-                <i class="fa-solid fa-magnifying-glass-location" style="margin-left: 10px;"></i>
-                ابحث واحجز أرخص رحلات الطيران (Aviasales)
-            </a>
+            <div class="widget-wrapper">
+                <!-- كود الـ Widget الخاص بك -->
+                <script src="https://tp.media/content?campaign_id=222&promo_id=8813&shmarker=762582&trs=563695" charset="utf-8"></script>
+            </div>
         </div>
 
         <!-- قسم التذاكر والأنشطة السياحية -->
