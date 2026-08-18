@@ -1,119 +1,91 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فلاي مسار | FLY MASAR</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #0b1325; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 15px; }
-        .container { width: 100%; max-width: 450px; text-align: center; }
-        
-        /* Header */
-        .header { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; margin-bottom: 10px; }
-        .logo-box { display: flex; align-items: center; gap: 10px; }
-        .logo-img { height: 45px; width: auto; border-radius: 8px; }
-        .logo-text { font-weight: bold; font-size: 18px; color: #38bdf8; }
-        .header-btns { display: flex; gap: 8px; }
-        .btn-sm { background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 6px 12px; border-radius: 20px; font-size: 12px; text-decoration: none; cursor: pointer; }
-        .btn-cyan { background: #00d2ff; color: #000; font-weight: bold; }
+<!-- قسم خدمات الحجز والفرص - فلاي مسار -->
+<style>
+  .flymasaar-booking-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    text-align: right;
+  }
+  .flymasaar-section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a2b49;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 10px;
+  }
+  .flymasaar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  .flymasaar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    background-color: #0066cc;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  }
+  .flymasaar-btn:hover {
+    background-color: #004999;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+</style>
 
-        /* Main Banner */
-        .hero-title { font-size: 22px; margin: 15px 0 8px; font-weight: 800; }
-        .hero-sub { font-size: 13px; color: #94a3b8; margin-bottom: 20px; line-height: 1.4; }
+<div class="flymasaar-booking-container">
+  
+  <!-- حجز الطيران والسفر -->
+  <div class="flymasaar-section-title">✈️ حجز رحلات الطيران</div>
+  <div class="flymasaar-grid" style="margin-bottom: 35px;">
+    <a href="https://aviasales.tpm.li/X4PkHXUn" target="_blank" class="flymasaar-btn">بحث وحجز رحلات الطيران (Aviasales)</a>
+  </div>
 
-        /* Quotes Box */
-        .quote-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 15px; text-align: right; margin-bottom: 25px; }
-        .quote-title { color: #f59e0b; font-size: 12px; margin-bottom: 8px; font-weight: bold; }
-        .quote-card { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 12px; margin-bottom: 8px; font-size: 12px; color: #cbd5e1; font-style: italic; line-height: 1.5; }
+  <!-- الأنشطة والجولات السياحية -->
+  <div class="flymasaar-section-title">🎟️ التذاكر والأنشطة السياحية</div>
+  <div class="flymasaar-grid" style="margin-bottom: 35px;">
+    <a href="https://klook.tpm.li/vNYIsWun" target="_blank" class="flymasaar-btn">تذاكر الأنشطة والمطاعم (Klook)</a>
+    <a href="https://tiqets.tpm.li/odeDvKA4" target="_blank" class="flymasaar-btn">تذاكر المتاحف والمعالم (Tiqets)</a>
+    <a href="https://gocity.tpm.li/pVHdvYOF" target="_blank" class="flymasaar-btn">بطاقات المدن السياحية (Go City)</a>
+    <a href="https://kkday.tpm.li/4KAvWZrJ" target="_blank" class="flymasaar-btn">رحلات وتجارب محلية (KKday)</a>
+    <a href="https://wegotrip.tpm.li/lqnw4Pqw" target="_blank" class="flymasaar-btn">جولات صوتية ذاتية (WeGoTrip)</a>
+  </div>
 
-        /* Category Tabs Grid */
-        .tabs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
-        .tab-card { background: #111d33; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 15px 10px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: #fff; font-size: 13px; font-weight: 600; transition: 0.3s; }
-        .tab-card.active { background: #00d2ff; color: #000; }
-        .tab-card i { font-size: 22px; }
+  <!-- التنقلات وتأجير السيارات -->
+  <div class="flymasaar-section-title">🚗 تأجير السيارات والتنقلات</div>
+  <div class="flymasaar-grid" style="margin-bottom: 35px;">
+    <a href="https://kiwitaxi.tpm.li/fmG71ckT" target="_blank" class="flymasaar-btn">توصيلات المطار (Kiwitaxi)</a>
+    <a href="https://gettransfer.tpm.li/D2iv8gl5" target="_blank" class="flymasaar-btn">خدمات النقل الخاص (GetTransfer)</a>
+    <a href="https://intui.tpm.li/ILb3wBru" target="_blank" class="flymasaar-btn">توصيلات الفنادق والمطارات (Intui.travel)</a>
+    <a href="https://economybookings.tpm.li/5taZUEas" target="_blank" class="flymasaar-btn">حجز سيارات بأرخص الأسعار (EconomyBookings)</a>
+    <a href="https://autoeurope.tpm.li/KeFyFnvv" target="_blank" class="flymasaar-btn">تأجير سيارات عالمي (Auto Europe)</a>
+    <a href="https://localrent.tpm.li/ydccO2Le" target="_blank" class="flymasaar-btn">تأجير سيارات من شركات محلية (Localrent)</a>
+    <a href="https://getrentacar.tpm.li/jcNxZkzB" target="_blank" class="flymasaar-btn">تأجير سيارات وسائقين (GetRentacar)</a>
+    <a href="https://qeeq.tpm.li/712OGtwO" target="_blank" class="flymasaar-btn">عروض تأجير السيارات (QEEQ)</a>
+    <a href="https://bikesbooking.tpm.li/SQjRigET" target="_blank" class="flymasaar-btn">حجز الدراجات والدبابات (BikesBooking)</a>
+  </div>
 
-        /* Links Section */
-        .section-title { text-align: right; font-size: 14px; color: #94a3b8; margin-bottom: 12px; font-weight: 600; }
-        .links-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 80px; }
-        .action-btn { display: flex; align-items: center; justify-content: space-between; background: #111d33; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 14px 16px; color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; }
-        .action-btn i.main-ic { font-size: 18px; color: #00d2ff; width: 25px; }
+  <!-- شرائح الإنترنت والتأمين والخدمات -->
+  <div class="flymasaar-section-title">📱 شرائح الإنترنت والتأمين والأمتعة</div>
+  <div class="flymasaar-grid">
+    <a href="https://yesim.tpm.li/B9hq4Y5a" target="_blank" class="flymasaar-btn">شرائح إنترنت مدمجة (Yesim eSIM)</a>
+    <a href="https://saily.tpm.li/2GSBCEa9" target="_blank" class="flymasaar-btn">شرائح إنترنت عالمية (Saily eSIM)</a>
+    <a href="https://drimsim.tpm.li/exa2xCyp" target="_blank" class="flymasaar-btn">شريحة اتصالات للرحلات (Drimsim)</a>
+    <a href="https://ektatraveling.tpm.li/U9Qh0DgR" target="_blank" class="flymasaar-btn">تأمين السفر الدولي (EKTA Insurance)</a>
+    <a href="https://airhelp.tpm.li/3QvqVFka" target="_blank" class="flymasaar-btn">تعويضات تأخير الطيران (AirHelp)</a>
+    <a href="https://compensair.tpm.li/fZbTOA5U" target="_blank" class="flymasaar-btn">مطالبة تعويض الرحلات (Compensair)</a>
+    <a href="https://radicalstorage.tpm.li/dqHsXyTL" target="_blank" class="flymasaar-btn">حفظ وتخزين الأمتعة (Radical Storage)</a>
+    <a href="https://tpm.li/escv3xQ5" target="_blank" class="flymasaar-btn">خدمات السفر الإضافية</a>
+  </div>
 
-        /* Bottom Nav */
-        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #0b1325; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-around; padding: 10px 0; }
-        .nav-item { color: #64748b; text-decoration: none; font-size: 10px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-        .nav-item.active { color: #00d2ff; }
-        .nav-item i { font-size: 18px; }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <!-- Header with Logo -->
-        <div class="header">
-            <div class="logo-box">
-                <img src="logo.png" alt="فلاي مسار" class="logo-img">
-                <span class="logo-text">FLY MASAR</span>
-            </div>
-            <div class="header-btns">
-                <span class="btn-sm"><i class="fa-solid fa-globe"></i> العربية</span>
-                <span class="btn-sm btn-cyan">تسجيل الدخول</span>
-            </div>
-        </div>
-
-        <!-- Title -->
-        <h1 class="hero-title">اعثر على أفضل سعر لرحلتك القادمة ✈️</h1>
-        <p class="hero-sub">اقرن أسعار المئات من الشركات وحجوزات الطيران والتوصيل في ثوانٍ معدودة</p>
-
-        <!-- Quotes Section -->
-        <div class="quote-box">
-            <div class="quote-title"> نصائح وحكم السفر</div>
-            <div class="quote-card">"السفر يعلمك التواضع، فهو يريك كم هو صغير الحجم المكان الذي تشغله من هذا العالم."</div>
-            <div class="quote-card">"استثمر في سفرياتك، فالذكريات هي الكنز الوحيد الذي لا ينتهي أبداً."</div>
-        </div>
-
-        <!-- Service Tabs Grid -->
-        <div class="tabs-grid">
-            <a href="https://aviasales.tpk.lv/921Eh2WK" target="_blank" class="tab-card active">
-                <i class="fa-solid fa-plane"></i>
-                <span>الطيران</span>
-            </a>
-            <a href="https://aviasales.tpk.lv/921Eh2WK" target="_blank" class="tab-card">
-                <i class="fa-solid fa-hotel"></i>
-                <span>الفنادق</span>
-            </a>
-            <a href="https://kiwitaxi.tpk.lv/uDEkaAJd" target="_blank" class="tab-card">
-                <i class="fa-solid fa-car"></i>
-                <span>السيارات</span>
-            </a>
-        </div>
-
-        <!-- Links List -->
-        <div class="section-title">خدمات فلاي مسار المباشرة</div>
-        <div class="links-list">
-            <a href="https://aviasales.tpk.lv/921Eh2WK" target="_blank" class="action-btn">
-                <i class="fa-solid fa-magnifying-glass main-ic"></i>
-                <span>البحث عن أفضل أسعار الطيران</span>
-                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #475569;"></i>
-            </a>
-
-            <a href="https://kiwitaxi.tpk.lv/uDEkaAJd" target="_blank" class="action-btn">
-                <i class="fa-solid fa-taxi main-ic"></i>
-                <span>حجز التاكسي والمواصلات بين المطارات</span>
-                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #475569;"></i>
-            </a>
-        </div>
-    </div>
-
-    <!-- Bottom Navigation Bar -->
-    <div class="bottom-nav">
-        <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i>الرئيسية</a>
-        <a href="#" class="nav-item"><i class="fa-solid fa-heart"></i>المفضلة</a>
-        <a href="#" class="nav-item"><i class="fa-solid fa-tag"></i>العروض</a>
-        <a href="#" class="nav-item"><i class="fa-solid fa-newspaper"></i>المقالات</a>
-        <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>حسابي</a>
-    </div>
-
-</body>
-</html>
+</div>
