@@ -1,0 +1,73 @@
+/* إعدادات عامة للألوان والأبعاد */
+:root {
+    --bg-dark: #0b1325;
+    --card-bg: #152238;
+    --primary-blue: #00a8e8;
+    --text-white: #ffffff;
+    --text-gray: #a0aec0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 70px; /* مساحة لشريط الموبايل السفلي */
+}
+
+/* 1. تنسيق الهيدر */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #080d1a;
+}
+.navbar .logo { font-weight: bold; color: #ffb703; }
+.btn-lang, .btn-login {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 2. بطاقات الخدمات */
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+}
+.service-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 28%;
+    border: 1px solid #1e2d4a;
+}
+.service-card.active {
+    background-color: var(--primary-blue);
+}
+.service-card i { font-size: 24px; display: block; margin-bottom: 8px; }
+
+/* 3. شريط التنقل السفلي للهواتف */
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #080d1a;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #1e2d4a;
+}
+.mobile-bottom-nav a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+}
+.mobile-bottom-nav a.active { color: var(--primary-blue); }
+.mobile-bottom-nav i { font-size: 18px; display: block; margin-bottom: 3px; }
