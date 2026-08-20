@@ -3,287 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فلاي مسار | Fly Masaar - وجهتك الحقيقية لحجز الرحلات</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #0066cc;
-            --primary-dark: #004080;
-            --bg: #f4f7f9;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --radius: 16px;
-            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-        body { background-color: var(--bg); color: var(--text); padding-bottom: 80px; }
-
-        /* الهيدر العلوي */
-        header { background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .header-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-area { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--primary); }
-        .logo-area i { font-size: 30px; color: var(--primary); }
-        .logo-area h1 { font-size: 24px; font-weight: 800; }
-
-        /* الهيرو الرئيسي ومربع البحث */
-        .hero-banner { 
-            background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200') center/cover no-repeat;
-            color: white; 
-            padding: 50px 20px 80px 20px; 
-            text-align: center; 
-        }
-        .hero-banner h2 { font-size: 30px; font-weight: 800; margin-bottom: 10px; }
-        .hero-banner p { font-size: 16px; opacity: 0.9; max-width: 600px; margin: 0 auto 30px auto; }
-
-        .search-container { 
-            max-width: 1000px; 
-            margin: -50px auto 40px auto; 
-            padding: 20px; 
-            background: var(--card-bg); 
-            border-radius: var(--radius); 
-            box-shadow: var(--shadow); 
-        }
-
-        .search-tabs { display: flex; gap: 10px; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; margin-bottom: 20px; overflow-x: auto; }
-        .tab-btn { display: flex; align-items: center; gap: 8px; padding: 10px 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 30px; font-weight: 700; color: #64748b; cursor: pointer; text-decoration: none; white-space: nowrap; transition: 0.3s; }
-        .tab-btn.active, .tab-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
-
-        .widget-area { width: 100%; min-height: 180px; display: flex; justify-content: center; align-items: center; overflow: hidden; }
-
-        /* الأقسام والكروت */
-        .main-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section-title { font-size: 22px; font-weight: 800; margin: 30px 0 20px 0; display: flex; align-items: center; gap: 10px; border-right: 4px solid var(--primary); padding-right: 12px; }
-
-        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 30px; }
-        .card { background: var(--card-bg); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #edf2f7; }
-        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .card-icon { width: 50px; height: 50px; background: #eef6ff; color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 15px; }
-        .card h4 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
-        .card p { font-size: 13px; color: #64748b; margin-bottom: 20px; line-height: 1.6; }
-        .card-btn { display: block; text-align: center; background: var(--primary); color: white; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: 700; transition: 0.3s; }
-        .card-btn:hover { background: var(--primary-dark); }
-
-        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 30px 20px; font-size: 14px; margin-top: 50px; }
-        
-        .mobile-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #ffffff; display: flex; justify-content: space-around; padding: 12px 0; box-shadow: 0 -4px 20px rgba(0,0,0,0.08); z-index: 1000; }
-        .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #64748b; font-size: 11px; font-weight: 600; }
-        .mobile-nav-item.active, .mobile-nav-item:hover { color: var(--primary); }
-    </style>
+    <title>Fly Masar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- استدعاء أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <div class="header-container">
-            <a href="#" class="logo-area">
-                <i class="fa-solid fa-plane-departure"></i>
-                <h1>فلاي مسار</h1>
-            </a>
+    <!-- 1. الهيدر العلوي -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Fly Masar Logo">
+            <span>FLY MASAR</span>
+        </div>
+        <div class="header-actions">
+            <button class="btn-lang"><i class="fa-solid fa-globe"></i> العربية</button>
+            <button class="btn-login"><i class="fa-solid fa-user"></i> تسجيل الدخول</button>
         </div>
     </header>
 
-    <section class="hero-banner">
-        <h2>عالم من خيارات السفر بين يديك ✈️</h2>
-        <p>ابحث عن أفضل عروض الطيران، الأنشطة، التنقلات، والخدمات السياحية بأسعار تنافسية</p>
+    <!-- 2. القسم الرئيسي واقتباسات السفر -->
+    <section class="hero-section">
+        <h1>اعثر على أفضل سعر لرحلتك القادمة ✈️</h1>
+        <p>قارن بين مئات الشركات العالمية واحجز في ثوانٍ</p>
+        
+        <div class="quotes-card">
+            <h4><i class="fa-solid fa-quote-left"></i> نصائح واقتباسات السفر</h4>
+            <p>"السفر يعلمك التواضع، ويظهر لك صغر حجمك في هذا العالم الواسع."</p>
+        </div>
     </section>
 
-    <!-- منطقة مربع البحث الرئيسي (Widget الطيران) -->
-    <div class="search-container">
-        <div class="search-tabs">
-            <a href="#flights" class="tab-btn active"><i class="fa-solid fa-plane"></i> الطيران</a>
-            <a href="#activities" class="tab-btn"><i class="fa-solid fa-ticket"></i> الأنشطة والتذاكر</a>
-            <a href="#transfers" class="tab-btn"><i class="fa-solid fa-car"></i> تأجير السيارات</a>
-            <a href="#services" class="tab-btn"><i class="fa-solid fa-sim-card"></i> خدمات السفر</a>
+    <!-- 3. بطاقات الخدمات الرئيسية -->
+    <section class="services-container">
+        <div class="service-card active">
+            <i class="fa-solid fa-plane"></i>
+            <span>الطيران</span>
         </div>
-        
-        <div class="widget-area" id="flights">
-            <!-- كود الـ Widget التفاعلي الخاص بك -->
-            <script src="https://tp.media/content?campaign_id=222&promo_id=8813&shmarker=762582&trs=563695" charset="utf-8"></script>
+        <div class="service-card">
+            <i class="fa-solid fa-hotel"></i>
+            <span>الفنادق</span>
         </div>
-    </div>
+        <div class="service-card">
+            <i class="fa-solid fa-car"></i>
+            <span>السيارات</span>
+        </div>
+    </section>
 
-    <div class="main-container">
+    <!-- 4. شريط الأمان والتقييمات -->
+    <section class="trust-bar">
+        <div class="rating">
+            <span class="score">4.8 ★</span>
+            <span>محل ثقة أكثر من 12,000 مسافر</span>
+        </div>
+        <div class="features">
+            <span><i class="fa-solid fa-shield"></i> دفع آمن</span>
+            <span><i class="fa-solid fa-bolt"></i> تأكيد فوري</span>
+            <span><i class="fa-solid fa-headset"></i> دعم 24/7</span>
+        </div>
+    </section>
 
-        <!-- قسم التذاكر والأنشطة السياحية (جميع الروابط كاملة) -->
-        <h3 class="section-title" id="activities"><i class="fa-solid fa-compass" style="color: var(--primary);"></i> التذاكر والأنشطة السياحية</h3>
-        <div class="grid-cards">
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-star"></i></div>
-                <h4>تذاكر الأنشطة والمطاعم (Klook)</h4>
-                <p>احجز تجارب سياحية وتذاكر مطاعم وأنشطة ترفيهية مميزة عالمياً.</p>
-                <a href="https://klook.tpm.li/vNYIsWun" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-landmark"></i></div>
-                <h4>تذاكر المتاحف والمعالم (Tiqets)</h4>
-                <p>دخول سريع بدون انتظار لأشهر المتاحف والمعالم السياحية في العالم.</p>
-                <a href="https://tiqets.tpm.li/odeDvKA4" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-city"></i></div>
-                <h4>بطاقات المدن السياحية (Go City)</h4>
-                <p>خصومات واستكشاف شامل لأهم معالم المدن العالمية عبر بطاقات موحدة.</p>
-                <a href="https://gocity.tpm.li/pVHdvYOF" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-                <h4>رحلات وتجارب محلية (KKday)</h4>
-                <p>استكشف التجارب المحلية والجولات الميدانية برفقة خبراء محليين.</p>
-                <a href="https://kkday.tpm.li/4KAvWZrJ" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-headphones"></i></div>
-                <h4>جولات صوتية ذاتية (WeGoTrip)</h4>
-                <p>استمع للإرشادات السياحية والمعلومات التاريخية عبر جولات صوتية تطبيقية.</p>
-                <a href="https://wegotrip.tpm.li/lqnw4Pqw" target="_blank" class="card-btn">احجز الآن</a>
+    <!-- 5. الفوتر (تذييل الصفحة) -->
+    <footer class="footer">
+        <div class="footer-info">
+            <h3>FLY MASAR</h3>
+            <p>وجهتك الذكية لأرخص تذاكر الطيران والفنادق حول العالم.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
 
-        <!-- قسم المواصلات وتأجير السيارات (جميع الروابط كاملة) -->
-        <h3 class="section-title" id="transfers"><i class="fa-solid fa-car" style="color: var(--primary);"></i> تأجير السيارات والتنقلات</h3>
-        <div class="grid-cards">
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-taxi"></i></div>
-                <h4>توصيلات المطار (Kiwitaxi)</h4>
-                <p>احجز سائقك الخاص بانتظارك في المطار للتوصيل المباشر للفندق.</p>
-                <a href="https://kiwitaxi.tpm.li/fmG71ckT" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-car-side"></i></div>
-                <h4>خدمات النقل الخاص (GetTransfer)</h4>
-                <p>تنقلات مريحة وسائقين محترفين لمختلف الوجهات والمجموعات.</p>
-                <a href="https://gettransfer.tpm.li/D2iv8gl5" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-van-shuttle"></i></div>
-                <h4>توصيلات الفنادق (Intui.travel)</h4>
-                <p>خيارات نقل اقتصادية وخاصة بين المطارات والفنادق في أنحاء العالم.</p>
-                <a href="https://intui.tpm.li/ILb3wBru" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-car"></i></div>
-                <h4>حجز سيارات اقتصادية (EconomyBookings)</h4>
-                <p>مقارنة أسعار أسطول السيارات من شركات تأجير عالمية متعددة.</p>
-                <a href="https://economybookings.tpm.li/5taZUEas" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
-                <h4>تأجير سيارات عالمي (Auto Europe)</h4>
-                <p>خدمات تأجير سيارات موثوقة في أكثر من 180 دولة حول العالم.</p>
-                <a href="https://autoeurope.tpm.li/KeFyFnvv" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
-                <h4>تأجير من شركات محلية (Localrent)</h4>
-                <p>استأجر مباشرة من شركات محلية بأسعار منافسة وشروط مرنة.</p>
-                <a href="https://localrent.tpm.li/ydccO2Le" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
-                <h4>تأجير سيارات وسائقين (GetRentacar)</h4>
-                <p>استئجار سيارات مع سائقين أو بدون سائق للرحلات الطويلة والمريحة.</p>
-                <a href="https://getrentacar.tpm.li/jcNxZkzB" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-tags"></i></div>
-                <h4>عروض تأجير السيارات (QEEQ)</h4>
-                <p>أفضل الصفات والخصومات على تأجير السيارات عالمياً.</p>
-                <a href="https://qeeq.tpm.li/712OGtwO" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-motorcycle"></i></div>
-                <h4>حجز الدراجات والدبابات (BikesBooking)</h4>
-                <p>استأجر دراجات نارية وسكوتر للتنقل بحرية داخل المدن.</p>
-                <a href="https://bikesbooking.tpm.li/SQjRigET" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
+        <div class="quick-links">
+            <h4>روابط سريعة</h4>
+            <ul>
+                <li><a href="#">طيران رخيص</a></li>
+                <li><a href="#">حجز فنادق</a></li>
+                <li><a href="#">تأجير سيارات</a></li>
+            </ul>
         </div>
 
-        <!-- قسم شرائح الإنترنت والتأمين والخدمات الإضافية (جميع الروابط كاملة) -->
-        <h3 class="section-title" id="services"><i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> شرائح الإنترنت، التأمين والخدمات الإضافية</h3>
-        <div class="grid-cards">
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
-                <h4>شرائح إنترنت مدمجة (Yesim eSIM)</h4>
-                <p>اتصال سريع بإنترنت الهاتف فور وصولك وجهتك بدون شريحة تقليدية.</p>
-                <a href="https://yesim.tpm.li/B9hq4Y5a" target="_blank" class="card-btn">احصل عليها</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-wifi"></i></div>
-                <h4>شرائح إنترنت عالمية (Saily eSIM)</h4>
-                <p>باقات إنترنت مخصصة للمسافرين بتغطية ممتازة لعدة دول.</p>
-                <a href="https://saily.tpm.li/2GSBCEa9" target="_blank" class="card-btn">احصل عليها</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-sim-card"></i></div>
-                <h4>شريحة اتصالات للرحلات (Drimsim)</h4>
-                <p>شريحة اتصالات دولية تعمل في معظم دول العالم بأسعار محلية.</p>
-                <a href="https://drimsim.tpm.li/exa2xCyp" target="_blank" class="card-btn">احصل عليها</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-kit-medical"></i></div>
-                <h4>تأمين السفر الدولي (EKTA Insurance)</h4>
-                <p>تغطية شاملة للحالات الطبية والمشاكل الطارئة أثناء سفرك.</p>
-                <a href="https://ektatraveling.tpm.li/U9Qh0DgR" target="_blank" class="card-btn">احصل عليه</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                <h4>تعويضات تأخير الطيران (AirHelp)</h4>
-                <p>طالب بتعويضات مالية في حال التأخير أو إلغاء الرحلات الجوية.</p>
-                <a href="https://airhelp.tpm.li/3QvqVFka" target="_blank" class="card-btn">طالب بالتعويض</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                <h4>مطالبة تعويض الرحلات (Compensair)</h4>
-                <p>مساعدة قانونية للحصول على التعويضات المالية من شركات الطيران.</p>
-                <a href="https://compensair.tpm.li/fZbTOA5U" target="_blank" class="card-btn">طالب بالتعويض</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-suitcase"></i></div>
-                <h4>حفظ وتخزين الأمتعة (Radical Storage)</h4>
-                <p>خزن أمتعتك وأغراضك بأمان في مراكز معتمدة لتستمتع بجولتك.</p>
-                <a href="https://radicalstorage.tpm.li/dqHsXyTL" target="_blank" class="card-btn">احجز الآن</a>
-            </div>
-
-            <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-plus"></i></div>
-                <h4>خدمات السفر الإضافية</h4>
-                <p>مجموعة من الخدمات والمميزات الإضافية لتسهيل رحلتك.</p>
-                <a href="https://tpm.li/escv3xQ5" target="_blank" class="card-btn">استكشف الخدمات</a>
-            </div>
+        <div class="newsletter">
+            <h4>اشترك في العروض</h4>
+            <input type="email" placeholder="أدخل بريدك الإلكتروني">
+            <button>اشتراك</button>
         </div>
-
-    </div>
-
-    <footer>
-        <p>© 2026 فلاي مسار (Fly Masaar) - جميع الحقوق محفوظة.</p>
     </footer>
 
-    <div class="mobile-nav">
-        <a href="#flights" class="mobile-nav-item active"><i class="fa-solid fa-plane"></i><span>طيران</span></a>
-        <a href="#activities" class="mobile-nav-item"><i class="fa-solid fa-ticket"></i><span>رحلات</span></a>
-        <a href="#transfers" class="mobile-nav-item"><i class="fa-solid fa-car"></i><span>سيارات</span></a>
-        <a href="#services" class="mobile-nav-item"><i class="fa-solid fa-sim-card"></i><span>خدمات</span></a>
-    </div>
+    <!-- 6. شريط التنقل السفلي للموبايل -->
+    <nav class="mobile-bottom-nav">
+        <a href="#" class="active"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a>
+        <a href="#"><i class="fa-solid fa-heart"></i><span>المفضلة</span></a>
+        <a href="#"><i class="fa-solid fa-tag"></i><span>العروض</span></a>
+        <a href="#"><i class="fa-solid fa-user"></i><span>حسابي</span></a>
+    </nav>
 
 </body>
 </html>
