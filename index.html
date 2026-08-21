@@ -31,7 +31,7 @@
             padding-bottom: 70px;
         }
 
-        /* Header Bar - تصميم الحياة ترافل */
+        /* Header Bar */
         .header {
             display: flex;
             justify-content: space-between;
@@ -180,10 +180,10 @@
             margin: 15px;
             background: var(--card-bg);
             border-radius: 16px;
-            padding: 12px;
+            padding: 15px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(50, 168, 221, 0.3);
-            min-height: 480px;
+            text-align: center;
         }
 
         .search-panel {
@@ -197,10 +197,22 @@
 
         iframe.engine-frame {
             width: 100%;
-            height: 500px;
+            height: 480px;
             border: none;
             border-radius: 12px;
             background: #ffffff;
+        }
+
+        .direct-link-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: var(--primary-blue);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
         }
 
         /* Info Toggle Card */
@@ -531,7 +543,7 @@
         <div class="quote-item">"استثمر في ذكريات سفرك، فهي الثروة الوحيدة التي لا تفنى."</div>
     </div>
 
-    <!-- Navigation Tabs Grid (Same Icons & Layout) -->
+    <!-- Navigation Tabs Grid -->
     <div class="services-grid">
         <div class="service-tab active" onclick="switchTab('flights')">
             <i class="fa-solid fa-plane"></i>
@@ -547,22 +559,28 @@
         </div>
     </div>
 
-    <!-- Search Engine Area (Updated Providers Integration) -->
+    <!-- Search Engine Area -->
     <div class="search-container">
         
         <!-- Flights Search Engine Container -->
         <div id="flights-panel" class="search-panel active">
             <iframe class="engine-frame" src="https://tp.media/r?marker=762582&trs=563695&p=4114&u=https%3A%2F%2Fwww.wayaway.io" title="Flights Engine"></iframe>
+            <br>
+            <a href="https://tp.media/r?marker=762582&trs=563695&p=4114&u=https%3A%2F%2Fwww.wayaway.io" target="_blank" class="direct-link-btn"><i class="fa-solid fa-external-link"></i> إذا لم يظهر المحرك اضغط هنا للبحث المباشر</a>
         </div>
 
-        <!-- Hotels Search Engine Container (ZenHotels) -->
+        <!-- Hotels Search Engine Container -->
         <div id="hotels-panel" class="search-panel">
             <iframe class="engine-frame" src="https://tp.media/r?marker=762582&trs=563695&p=3896&u=https%3A%2F%2Fwww.zenhotels.com" title="ZenHotels Engine"></iframe>
+            <br>
+            <a href="https://tp.media/r?marker=762582&trs=563695&p=3896&u=https%3A%2F%2Fwww.zenhotels.com" target="_blank" class="direct-link-btn"><i class="fa-solid fa-external-link"></i> إذا لم يظهر المحرك اضغط هنا للبحث المباشر</a>
         </div>
 
-        <!-- Cars Search Engine Container (EconomyBookings) -->
+        <!-- Cars Search Engine Container -->
         <div id="cars-panel" class="search-panel">
             <iframe class="engine-frame" src="https://tp.media/r?marker=762582&trs=563695&p=2102&u=https%3A%2F%2Fwww.economybookings.com" title="EconomyBookings Engine"></iframe>
+            <br>
+            <a href="https://tp.media/r?marker=762582&trs=563695&p=2102&u=https%3A%2F%2Fwww.economybookings.com" target="_blank" class="direct-link-btn"><i class="fa-solid fa-external-link"></i> إذا لم يظهر المحرك اضغط هنا للبحث المباشر</a>
         </div>
 
     </div>
@@ -685,7 +703,6 @@
                 tabs[2].classList.add('active');
                 document.getElementById('cars-panel').classList.add('active');
             }
-            window.scrollTo({ top: 300, behavior: 'smooth' });
         }
 
         function toggleWhyBox() {
