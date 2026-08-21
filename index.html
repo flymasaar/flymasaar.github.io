@@ -175,12 +175,12 @@
             color: #fff;
         }
 
-        /* Search Engine Area */
+        /* Search Engine Box */
         .search-container {
             margin: 15px;
             background: var(--card-bg);
             border-radius: 16px;
-            padding: 15px;
+            padding: 25px 15px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(50, 168, 221, 0.3);
             text-align: center;
@@ -195,24 +195,49 @@
             display: block;
         }
 
-        iframe.engine-frame {
-            width: 100%;
-            height: 480px;
-            border: none;
+        .engine-box {
+            background: rgba(10, 25, 47, 0.7);
+            border: 1px dashed var(--primary-blue);
             border-radius: 12px;
-            background: #ffffff;
+            padding: 30px 15px;
+            margin-bottom: 15px;
         }
 
-        .direct-link-btn {
+        .engine-box i {
+            font-size: 40px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .engine-box h3 {
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .engine-box p {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .action-link-btn {
             display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
+            width: 100%;
+            max-width: 280px;
+            padding: 12px 20px;
             background: var(--primary-blue);
             color: #fff;
-            border-radius: 8px;
+            border-radius: 25px;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
+            box-shadow: 0 4px 15px rgba(50, 168, 221, 0.4);
+            transition: 0.3s;
+        }
+
+        .action-link-btn:hover {
+            background: var(--dark-blue);
         }
 
         /* Info Toggle Card */
@@ -562,25 +587,34 @@
     <!-- Search Engine Area -->
     <div class="search-container">
         
-        <!-- Flights Search Engine Container -->
+        <!-- Flights Search Panel -->
         <div id="flights-panel" class="search-panel active">
-            <iframe class="engine-frame" src="https://tp.media/r?marker=762582&trs=563695&p=4114&u=https%3A%2F%2Fwww.wayaway.io" title="Flights Engine"></iframe>
-            <br>
-            <a href="https://tp.media/r?marker=762582&trs=563695&p=4114&u=https%3A%2F%2Fwww.wayaway.io" target="_blank" class="direct-link-btn"><i class="fa-solid fa-external-link"></i> إذا لم يظهر المحرك اضغط هنا للبحث المباشر</a>
+            <div class="engine-box">
+                <i class="fa-solid fa-plane-departure"></i>
+                <h3>مُحرك بحث تذاكر الطيران</h3>
+                <p>ابحث وقارن بين المئات من شركات الطيران العالمية بضغطة زر</p>
+                <a href="https://tp.media/r?marker=762582&trs=563695&p=4114&u=https%3A%2F%2Fwww.wayaway.io" target="_blank" class="action-link-btn"><i class="fa-solid fa-magnifying-glass"></i> البحث عن رحلات طيران</a>
+            </div>
         </div>
 
-        <!-- Hotels Search Engine Container -->
+        <!-- Hotels Search Panel -->
         <div id="hotels-panel" class="search-panel">
-            <iframe class="engine-frame" src="https://tp.media/r?marker=762582&trs=563695&p=3896&u=https%3A%2F%2Fwww.zenhotels.com" title="ZenHotels Engine"></iframe>
-            <br>
-            <a href="https://tp.media/r?marker=762582&trs=563695&p=3896&u=https%3A%2F%2Fwww.zenhotels.com" target="_blank" class="direct-link-btn"><i class="fa-solid fa-external-link"></i> إذا لم يظهر المحرك اضغط هنا للبحث المباشر</a>
+            <div class="engine-box">
+                <i class="fa-solid fa-hotel"></i>
+                <h3>مُحرك بحث الفنادق والمنتجعات</h3>
+                <p>احصل على أفضل الأسعار والعروض لأكثر من مليون فندق حول العالم</p>
+                <a href="https://tp.media/r?marker=762582&trs=563695&p=3896&u=https%3A%2F%2Fwww.zenhotels.com" target="_blank" class="action-link-btn"><i class="fa-solid fa-magnifying-glass"></i> البحث عن فنادق</a>
+            </div>
         </div>
 
-        <!-- Cars Search Engine Container -->
+        <!-- Cars Search Panel -->
         <div id="cars-panel" class="search-panel">
-            <iframe class="engine-frame" src="https://tp.media/r?marker=762582&trs=563695&p=2102&u=https%3A%2F%2Fwww.economybookings.com" title="EconomyBookings Engine"></iframe>
-            <br>
-            <a href="https://tp.media/r?marker=762582&trs=563695&p=2102&u=https%3A%2F%2Fwww.economybookings.com" target="_blank" class="direct-link-btn"><i class="fa-solid fa-external-link"></i> إذا لم يظهر المحرك اضغط هنا للبحث المباشر</a>
+            <div class="engine-box">
+                <i class="fa-solid fa-car"></i>
+                <h3>مُحرك تأجير السيارات</h3>
+                <p>قارن بين أفضل شركات تأجير السيارات واحجز سيارتك بأرخص سعر</p>
+                <a href="https://tp.media/r?marker=762582&trs=563695&p=2102&u=https%3A%2F%2Fwww.economybookings.com" target="_blank" class="action-link-btn"><i class="fa-solid fa-magnifying-glass"></i> البحث عن سيارات</a>
+            </div>
         </div>
 
     </div>
@@ -731,3 +765,4 @@
     </script>
 </body>
 </html>
+
