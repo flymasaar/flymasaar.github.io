@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLY MASAR - فلاي مسار</title>
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -180,10 +179,10 @@
             margin: 15px;
             background: var(--card-bg);
             border-radius: 16px;
-            padding: 20px 10px;
+            padding: 25px 15px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(50, 168, 221, 0.3);
-            min-height: 250px;
+            text-align: center;
         }
 
         .search-panel {
@@ -193,6 +192,50 @@
 
         .search-panel.active {
             display: block;
+        }
+
+        .engine-box {
+            background: rgba(10, 25, 47, 0.7);
+            border: 1px dashed var(--primary-blue);
+            border-radius: 12px;
+            padding: 30px 15px;
+        }
+
+        .engine-box i {
+            font-size: 40px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .engine-box h3 {
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .engine-box p {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .action-link-btn {
+            display: inline-block;
+            width: 100%;
+            max-width: 280px;
+            padding: 12px 20px;
+            background: var(--primary-blue);
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(50, 168, 221, 0.4);
+            transition: 0.3s;
+        }
+
+        .action-link-btn:hover {
+            background: var(--dark-blue);
         }
 
         /* Info Toggle Card */
@@ -489,7 +532,6 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header class="header">
         <div class="logo">
             <img src="1786580545852204.png" alt="FLY MASAR Logo">
@@ -507,13 +549,11 @@
         </div>
     </header>
 
-    <!-- Main Title -->
     <section class="hero">
         <h1>اعثر على أفضل سعر لرحلتك القادمة ✈️</h1>
         <p>قارن أسعار المئات من الشركات العالمية واحجز رحلتك، فندقك، أو سيارتك مباشرة</p>
     </section>
 
-    <!-- Travel Quotes Section -->
     <div class="quotes-card">
         <div class="quotes-title">
             <i class="fa-solid fa-quote-left"></i>
@@ -523,7 +563,6 @@
         <div class="quote-item">"استثمر في ذكريات سفرك، فهي الثروة الوحيدة التي لا تفنى."</div>
     </div>
 
-    <!-- Navigation Tabs Grid -->
     <div class="services-grid">
         <div class="service-tab active" onclick="switchTab('flights')">
             <i class="fa-solid fa-plane"></i>
@@ -539,27 +578,37 @@
         </div>
     </div>
 
-    <!-- Search Engine Area (Widget Scripts) -->
     <div class="search-container">
         
-        <!-- Flights Search Widget Panel -->
         <div id="flights-panel" class="search-panel active">
-            <script charset="utf-8" src="https://tp.media/content?currency=usd&trs=563695&shmarker=762582&show_hotels=false&powered_by=false&locale=ar&search_host=www.wayaway.io%2Fsearch&flight_params=DXB.CAI&color_scheme=blue&dark_theme=true&primary=%2332a8dd&special_palette=false&local_id=ar&id=4114&campaign_id=200" async></script>
+            <div class="engine-box">
+                <i class="fa-solid fa-plane-departure"></i>
+                <h3>مُحرك بحث تذاكر الطيران</h3>
+                <p>ابحث وقارن بين المئات من شركات الطيران العالمية عبر Aviasales</p>
+                <a href="https://aviasales.tpm.li/bpz7guql" target="_blank" class="action-link-btn"><i class="fa-solid fa-magnifying-glass"></i> البحث عن رحلات طيران</a>
+            </div>
         </div>
 
-        <!-- Hotels Search Widget Panel -->
         <div id="hotels-panel" class="search-panel">
-            <script charset="utf-8" src="https://tp.media/content?currency=usd&trs=563695&shmarker=762582&show_hotels=true&powered_by=false&locale=ar&search_host=www.zenhotels.com&color_scheme=blue&dark_theme=true&primary=%2332a8dd&special_palette=false&id=3896&campaign_id=113" async></script>
+            <div class="engine-box">
+                <i class="fa-solid fa-hotel"></i>
+                <h3>مُحرك بحث الفنادق والمنتجعات</h3>
+                <p>احصل على أفضل الأسعار والعروض لأكثر من مليون فندق حول العالم</p>
+                <a href="https://tp.media/r?marker=762582&trs=563695&p=3896&u=https%3A%2F%2Fwww.zenhotels.com" target="_blank" class="action-link-btn"><i class="fa-solid fa-magnifying-glass"></i> البحث عن فنادق</a>
+            </div>
         </div>
 
-        <!-- Cars Search Widget Panel -->
         <div id="cars-panel" class="search-panel">
-            <script charset="utf-8" src="https://tp.media/content?currency=usd&trs=563695&shmarker=762582&powered_by=false&locale=ar&search_host=www.economybookings.com&color_scheme=blue&dark_theme=true&primary=%2332a8dd&special_palette=false&id=2102&campaign_id=14" async></script>
+            <div class="engine-box">
+                <i class="fa-solid fa-car"></i>
+                <h3>مُحرك تأجير السيارات</h3>
+                <p>قارن بين أفضل شركات تأجير السيارات عبر EconomyBookings</p>
+                <a href="https://economybookings.tpm.li/LeH6bSYW" target="_blank" class="action-link-btn"><i class="fa-solid fa-magnifying-glass"></i> البحث عن سيارات</a>
+            </div>
         </div>
 
     </div>
 
-    <!-- Info Section -->
     <div class="info-card" onclick="toggleWhyBox()">
         <div class="info-icon"><i class="fa-solid fa-circle-question"></i></div>
         <div class="info-text">
@@ -575,7 +624,6 @@
         <p>3. <strong>دعم على مدار الساعة 24/7:</strong> نوفر لك التواصل المباشر عبر الواتساب لتنسيق سفرك.</p>
     </div>
 
-    <!-- Destinations Grid Section -->
     <div class="section-title">
         <i class="fa-solid fa-earth-americas" style="color: var(--primary-blue);"></i>
         <span>استكشف أشهر الوجهات (Explore Destinations)</span>
@@ -604,7 +652,6 @@
         </div>
     </div>
 
-    <!-- Trust Badges -->
     <div class="trust-box">
         <div class="rating-stars">
             <i class="fa-solid fa-star"></i>
@@ -622,7 +669,6 @@
         </div>
     </div>
 
-    <!-- Login Modal -->
     <div id="authModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -641,7 +687,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-brand">
             <img src="1786580545852204.png" alt="FLY MASAR Logo">
@@ -658,7 +703,6 @@
         </div>
     </footer>
 
-    <!-- Interactive Script -->
     <script>
         function switchTab(type) {
             var tabs = document.querySelectorAll('.service-tab');
