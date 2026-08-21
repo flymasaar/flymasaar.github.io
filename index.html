@@ -35,23 +35,25 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 12px 15px;
             background-color: var(--bg-color);
             border-bottom: 1px solid rgba(50, 168, 221, 0.2);
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             color: var(--primary-blue);
         }
 
         .logo img {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             border: 2px solid var(--primary-blue);
             object-fit: contain;
@@ -62,18 +64,37 @@
         .header-controls {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+        }
+
+        .auth-btn {
+            background: var(--dark-blue);
+            color: #fff;
+            border: 1px solid var(--primary-blue);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+
+        .auth-btn:hover {
+            background: var(--primary-blue);
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 25px 15px 10px;
+            padding: 20px 15px 10px;
         }
 
         .hero h1 {
-            font-size: 22px;
-            margin-bottom: 8px;
+            font-size: 20px;
+            margin-bottom: 6px;
             color: #ffffff;
         }
 
@@ -87,7 +108,7 @@
         .quotes-card {
             background: var(--card-bg);
             border-radius: 16px;
-            padding: 18px;
+            padding: 16px;
             margin: 15px;
             border: 1px solid rgba(50, 168, 221, 0.2);
         }
@@ -96,7 +117,7 @@
             color: var(--primary-blue);
             font-size: 14px;
             font-weight: bold;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -104,10 +125,10 @@
 
         .quote-item {
             background: rgba(10, 25, 47, 0.6);
-            padding: 12px;
+            padding: 10px;
             border-radius: 10px;
             font-style: italic;
-            font-size: 13px;
+            font-size: 12px;
             color: #ccd6f6;
             margin-bottom: 8px;
             border-right: 3px solid var(--primary-blue);
@@ -117,43 +138,39 @@
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin: 20px 15px;
+            gap: 10px;
+            margin: 15px;
         }
 
         .service-btn {
             background: var(--card-bg);
             border: 1px solid rgba(50, 168, 221, 0.2);
-            border-radius: 16px;
-            padding: 18px 10px;
+            border-radius: 14px;
+            padding: 15px 8px;
             text-align: center;
             color: #fff;
             text-decoration: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             font-size: 13px;
             font-weight: 600;
             transition: 0.3s;
         }
 
-        .service-btn.active, .service-btn:hover {
+        .service-btn:hover {
             background: var(--dark-blue);
             border-color: var(--primary-blue);
             box-shadow: 0 4px 15px rgba(50, 168, 221, 0.3);
         }
 
         .service-btn i {
-            font-size: 24px;
+            font-size: 22px;
             color: var(--primary-blue);
         }
 
-        .service-btn.active i {
-            color: #ffffff;
-        }
-
-        /* Interactive Search Engine Container */
+        /* Search Engine Box */
         .search-container {
             margin: 15px;
             background: var(--card-bg);
@@ -163,7 +180,7 @@
             border: 1px solid rgba(50, 168, 221, 0.3);
         }
 
-        /* Info Sections (Why Us & Destinations) */
+        /* Interactive Info Sections */
         .info-card {
             background: var(--card-bg);
             border-radius: 16px;
@@ -173,23 +190,33 @@
             align-items: center;
             gap: 15px;
             border: 1px solid rgba(50, 168, 221, 0.15);
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .info-card:hover {
+            border-color: var(--primary-blue);
+            background: rgba(17, 34, 64, 0.8);
         }
 
         .info-icon {
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
             background: var(--dark-blue);
             border: 1px solid var(--primary-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 16px;
             color: #fff;
+            flex-shrink: 0;
         }
 
         .info-text h3 {
-            font-size: 15px;
+            font-size: 14px;
             margin-bottom: 4px;
             color: #fff;
         }
@@ -199,10 +226,97 @@
             color: var(--text-secondary);
         }
 
-        /* Footer Section */
+        /* Why Fly Masar Answers Box */
+        .why-answer-box {
+            display: none;
+            background: rgba(10, 25, 47, 0.9);
+            border: 1px solid var(--primary-blue);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 10px 15px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #ccd6f6;
+        }
+
+        /* Modal Styles for Login/Register */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-blue);
+            border-radius: 16px;
+            padding: 25px;
+            width: 90%;
+            max-width: 380px;
+            color: #fff;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        .modal-content h2 {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+            color: var(--text-secondary);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(50, 168, 221, 0.3);
+            background: #0a192f;
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background: var(--primary-blue);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Footer */
         .footer {
             background: #060e1a;
-            padding: 30px 20px;
+            padding: 25px 20px;
             margin-top: 30px;
             border-top: 1px solid rgba(50, 168, 221, 0.2);
         }
@@ -214,7 +328,7 @@
             font-size: 18px;
             font-weight: bold;
             color: var(--primary-blue);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .footer-brand img {
@@ -225,27 +339,27 @@
         }
 
         .footer-desc {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-secondary);
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .social-title {
-            font-size: 14px;
-            margin-bottom: 12px;
+            font-size: 13px;
+            margin-bottom: 10px;
             color: #fff;
         }
 
         .social-links {
             display: flex;
-            gap: 12px;
-            margin-bottom: 25px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
         .social-icon {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             background: var(--card-bg);
             border: 1px solid rgba(50, 168, 221, 0.3);
             border-radius: 10px;
@@ -254,52 +368,22 @@
             justify-content: center;
             color: var(--primary-blue);
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             transition: 0.3s;
         }
 
         .social-icon:hover {
             background: var(--primary-blue);
             color: #fff;
-            transform: translateY(-3px);
         }
 
-        .footer-links h4 {
-            font-size: 15px;
-            margin-bottom: 12px;
-            color: var(--primary-blue);
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-blue);
-        }
-
-        /* Google Translate Styling Overrides */
         #google_translate_element select {
             background: var(--card-bg);
             color: white;
             border: 1px solid var(--primary-blue);
-            padding: 6px;
-            border-radius: 12px;
-            font-size: 12px;
+            padding: 4px;
+            border-radius: 10px;
+            font-size: 11px;
         }
     </style>
 </head>
@@ -311,6 +395,7 @@
             <span>FLY MASAR</span>
         </div>
         <div class="header-controls">
+            <button class="auth-btn" onclick="openModal()"><i class="fa-solid fa-user"></i> دخول / حساب</button>
             <div id="google_translate_element"></div>
             <script type="text/javascript">
             function googleTranslateElementInit() {
@@ -323,7 +408,7 @@
 
     <section class="hero">
         <h1>اعثر على أفضل سعر لرحلتك القادمة ✈️</h1>
-        <p> قارن أسعار المئات من الشركات العالمية واحجز رحلتك أو فندقك في ثوانٍ</p>
+        <p>قارن أسعار المئات من الشركات العالمية واحجز رحلتك أو فندقك في ثوانٍ</p>
     </section>
 
     <div class="quotes-card">
@@ -336,15 +421,15 @@
     </div>
 
     <div class="services-grid">
-        <a href="#search-engine" class="service-btn active">
+        <a href="#search-engine" class="service-btn">
             <i class="fa-solid fa-plane"></i>
             <span>طيران</span>
         </a>
-        <a href="#search-engine" class="service-btn">
+        <a href="https://www.booking.com" target="_blank" class="service-btn">
             <i class="fa-solid fa-hotel"></i>
             <span>فنادق</span>
         </a>
-        <a href="#search-engine" class="service-btn">
+        <a href="https://www.rentalcars.com" target="_blank" class="service-btn">
             <i class="fa-solid fa-car"></i>
             <span>سيارات</span>
         </a>
@@ -354,19 +439,36 @@
         <script async src="https://tpwidg.com/content?currency=aed&trs=563695&shmarker=762582&show_hotels=true&powered_by=true&locale=ar&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2332a8dd&color_button=%2332A8DDff&color_icons=%230470A3ff&dark=%230a192fff&light=%23112240ff&secondary=%238892b0ff&special=%23ffffffff&color_focused=%2332a8dd&border_radius=16&no_labels=&plain=false&promo_id=7879&campaign_id=100" charset="utf-8"></script>
     </div>
 
-    <div class="info-card">
+    <div class="info-card" onclick="toggleWhyBox()">
         <div class="info-icon"><i class="fa-solid fa-question"></i></div>
         <div class="info-text">
-            <h3>لماذا فلاي مسار (FLY MASAR)؟</h3>
-            <p>اكتشف مميزاتنا وأفضل العروض المتاحة</p>
+            <h3>لماذا فلاي مسار (FLY MASAR)؟ (اضغط للتفاصيل)</h3>
+            <p>اكتشف مميزاتنا وأرخص العروض المتاحة للرحلات</p>
         </div>
     </div>
 
-    <div class="info-card">
-        <div class="info-icon"><i class="fa-solid fa-globe"></i></div>
-        <div class="info-text">
-            <h3>استكشف جميع الوجهات</h3>
-            <p>أكثر الوجهات شعبية وبحثاً حول العالم</p>
+    <div id="why-box" class="why-answer-box">
+        <h4 style="color: var(--primary-blue); margin-bottom: 8px;">🌟 مميزات فلاي مسار:</h4>
+        <p>1. <strong>أرخص الأسعار:</strong> نقوم بمقارنة أسعار مئات شركات الطيران والفنادق عالمياً في ثوانٍ لنضمن لك السعر الأقل.</p>
+        <p>2. <strong>بدون رسوم خفية:</strong> البحث مجاني 100% وتحويلك يتم مباشرة لشركة الطيران الرسمية لإتمام الحجز.</p>
+        <p>3. <strong>دعم على مدار الساعة 24/7:</strong> نوفر لك التواصل المباشر عبر الواتساب لتسهيل وتنسيق رحلاتك في أي وقت.</p>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>تسجيل الدخول / إنشاء حساب</h2>
+            <form onsubmit="alert('تم تسجيل الدخول بنجاح في فلاي مسار!'); closeModal(); return false;">
+                <div class="form-group">
+                    <label>البريد الإلكتروني / رقم الهاتف</label>
+                    <input type="text" placeholder="أدخل بياناتك هنا" required>
+                </div>
+                <div class="form-group">
+                    <label>كلمة المرور</label>
+                    <input type="password" placeholder="********" required>
+                </div>
+                <button type="submit" class="submit-btn">متابعة</button>
+            </form>
         </div>
     </div>
 
@@ -384,15 +486,33 @@
             <a href="https://www.tiktok.com/@flymasaar" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
             <a href="https://wa.me/message/DD5HGTTYMG6MC1?_r=1&_t=ZS-992oILKuMtA" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
-
-        <div class="footer-links">
-            <h4>روابط سريعة</h4>
-            <ul>
-                <li><a href="#search-engine"><i class="fa-solid fa-plane"></i> طيران اقتصادي</a></li>
-                <li><a href="#search-engine"><i class="fa-solid fa-hotel"></i> حجز فنادق</a></li>
-            </ul>
-        </div>
     </footer>
 
+    <script>
+        function toggleWhyBox() {
+            var box = document.getElementById("why-box");
+            if (box.style.display === "block") {
+                box.style.display = "none";
+            } else {
+                box.style.display = "block";
+            }
+        }
+
+        function openModal() {
+            document.getElementById("authModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("authModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("authModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
+
