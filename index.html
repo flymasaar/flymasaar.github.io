@@ -27,7 +27,6 @@
             line-height: 1.6;
         }
 
-        /* Header */
         header {
             background: linear-gradient(135deg, var(--primary), #002244);
             color: white;
@@ -46,14 +45,12 @@
             font-size: 1.1rem;
         }
 
-        /* Main Container */
         .container {
             max-width: 1000px;
             margin: -30px auto 40px;
             padding: 0 20px;
         }
 
-        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -85,7 +82,6 @@
             color: var(--primary);
         }
 
-        /* Call to Action Section */
         .cta-section {
             background: white;
             border-radius: 12px;
@@ -95,7 +91,6 @@
             margin-bottom: 30px;
         }
 
-        /* Buttons */
         .btn-group {
             display: flex;
             flex-wrap: wrap;
@@ -111,10 +106,11 @@
             padding: 12px 25px;
             border-radius: 30px;
             text-decoration: none;
-            -<header>
-    <h1>فلاي مسار | Fly Masar</h1>
-    <p>شريكك الموثوق للسفر - أفضل عروض الطيران والأنشطة السياحية</p>
-</header>
+            font-weight: bold;
+            color: #ffffff !important; /* إصلاح لون النص ليظهر باللون الأبيض الواضح */
+            transition: opacity 0.3s;
+        }
+
         .btn:hover {
             opacity: 0.9;
         }
@@ -123,7 +119,6 @@
         .btn-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
         .btn-facebook { background-color: #1877f2; }
 
-        /* Footer */
         footer {
             background: var(--primary);
             color: white;
@@ -136,13 +131,14 @@
 <body>
 
     <header>
+        <img src="logo.png" alt="Fly Masar Logo" style="max-width: 120px; height: auto; border-radius: 50%; margin-bottom: 15px;">
         <h1>فلاي مسار | Fly Masar</h1>
         <p>شريكك الموثوق للسفر - أفضل عروض الطيران والأنشطة السياحية</p>
     </header>
 
     <div class="container">
         
-        <!-- Services Section -->
+        <!-- خدماتنا الأساسية -->
         <div class="services-grid">
             <div class="card">
                 <i class="fa-solid fa-plane-departure"></i>
@@ -161,33 +157,38 @@
             </div>
         </div>
 
-<!-- قسم محرك البحث والحجز المباشر -->
-<div class="cta-section" style="margin-bottom: 30px;">
-    <h2>ابحث واحجز رحلتك مباشرة</h2>
-    <p>اختر الخدمة للبدء في استعراض أفضل الأسعار المتاحة</p>
-    <div class="btn-group">
-        <a href="https://flymasaar.com" class="btn" style="background-color: #0a3663;" target="_blank">
-            <i class="fa-solid fa-plane"></i> البحث عن رحلات طيران
-        </a>
-        <a href="https://flymasaar.com" class="btn" style="background-color: #00a8cc;" target="_blank">
-            <i class="fa-solid fa-bed"></i> البحث عن فنادق
-        </a>
-    </div>
-</div>
+        <!-- قسم البحث المباشر (مرة واحدة فقط) -->
+        <div class="cta-section">
+            <h2>ابحث واحجز رحلتك مباشرة</h2>
+            <p>اختر الخدمة للبدء في استعراض أفضل الأسعار المتاحة</p>
+            <div class="btn-group">
+                <a href="https://wa.me/message/DD5HGTTYMG5MC1" class="btn" style="background-color: #0a3663;" target="_blank">
+                    <i class="fa-solid fa-plane"></i> البحث عن رحلات طيران
+                </a>
+                <a href="https://wa.me/message/DD5HGTTYMG5MC1" class="btn" style="background-color: #00a8cc;" target="_blank">
+                    <i class="fa-solid fa-bed"></i> البحث عن فنادق
+                </a>
+            </div>
+        </div>
 
-<div class="cta-section" style="margin-bottom: 30px;">
-    <h2>ابحث واحجز رحلتك مباشرة</h2>
-    <p>اختر الخدمة للبدء في استعراض أفضل الأسعار المتاحة</p>
-    <div class="btn-group">
-        <a href="https://flymasaar.com" class="btn" style="background-color: #0a3663;" target="_blank">
-            <i class="fa-solid fa-plane"></i> البحث عن رحلات طيران
-        </a>
-        <a href="https://flymasaar.com" class="btn" style="background-color: #00a8cc;" target="_blank">
-            <i class="fa-solid fa-bed"></i> البحث عن فنادق
-        </a>
-    </div>
-</div>
+        <!-- قسم العروض السياحية -->
+        <h2 style="text-align: center; margin-bottom: 20px; color: #0a3663;">أحدث العروض السياحية</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>عرض دبي الشامل</h3>
+                <p>تذاكر طيران + إقامة 5 أيام في فندق 4 نجوم + جولة سياحية.</p>
+                <a href="https://wa.me/message/DD5HGTTYMG5MC1" class="btn btn-whatsapp" style="margin-top: 15px;" target="_blank">استفسر عن العرض</a>
+            </div>
+            <div class="card">
+                <h3>رحلات القاهرة المميزة</h3>
+                <p>عرض خاص يشمل الطيران والإقامة مع وجبة الإفطار والبرامج.</p>
+                <a href="https://wa.me/message/DD5HGTTYMG5MC1" class="btn btn-whatsapp" style="margin-top: 15px;" target="_blank">استفسر عن العرض</a>
+            </div>
+        </div>
 
+        <!-- قسم التواصل الاجتماعي -->
+        <div class="cta-section">
+            <h2>تواصل معنا للخدمات والاستفسارات</h2>
             <div class="btn-group">
                 <a href="https://wa.me/message/DD5HGTTYMG5MC1" class="btn btn-whatsapp" target="_blank">
                     <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر
@@ -209,3 +210,4 @@
 
 </body>
 </html>
+
