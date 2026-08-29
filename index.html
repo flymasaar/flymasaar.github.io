@@ -45,38 +45,9 @@
             font-size: 1.1rem;
         }
 
-        /* تنسيق قسم اختيار اللغة والعملة */
-        .controls-section {
-            background-color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .control-group {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .control-group label {
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        .control-group select {
-            padding: 8px 12px;
-            border-radius: 20px;
-            border: 1px solid #ccc;
-            outline: none;
-            cursor: pointer;
-        }
-
         .container {
             max-width: 1000px;
-            margin: -30px auto 40px;
+            margin: 30px auto 40px;
             padding: 0 20px;
         }
 
@@ -117,7 +88,7 @@
         .cta-section {
             background: white;
             border-radius: 12px;
-            padding: 30px;
+            padding: 30px 20px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             margin-bottom: 30px;
@@ -155,7 +126,6 @@
         .btn-facebook { background-color: #1877f2; }
         .btn-email { background-color: #ea4335; }
 
-        /* زر الواتساب العائم */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -207,26 +177,9 @@
         <p>شريكك الموثوق للسفر - أفضل عروض الطيران والأنشطة السياحية</p>
     </header>
 
-    <div class="controls-section">
-        <div class="control-group">
-            <label for="lang-select">اللغة:</label>
-            <select id="lang-select">
-                <option value="ar" selected>العربية</option>
-                <option value="en">English</option>
-            </select>
-        </div>
-        <div class="control-group">
-            <label for="currency-select">العملة:</label>
-            <select id="currency-select">
-                <option value="AED" selected>درهم إماراتي (AED)</option>
-                <option value="USD">دولار أمريكي (USD)</option>
-                <option value="EUR">يورو (EUR)</option>
-            </select>
-        </div>
-    </div>
-
     <div class="container">
         
+        <!-- خدماتنا الأساسية -->
         <div class="services-grid">
             <div class="card">
                 <i class="fa-solid fa-plane-departure"></i>
@@ -245,13 +198,16 @@
             </div>
         </div>
 
+        <!-- قسم محرك البحث المباشر -->
         <div class="cta-section">
-            <h2>ابحث واحجز رحلتك مباشرة</h2>
-            <p>اختر الخدمة للبدء في استعراض أفضل الأسعار المتاحة</p>
-            <div id="tp-widget-container" style="margin-top: 20px;">
-                </div>
+            <h2 style="margin-bottom: 10px; color: #0a3663;">ابحث واحجز رحلتك مباشرة</h2>
+            <p style="margin-bottom: 20px; color: #666;">اختر وجهتك وتاريخ السفر واستعرض أفضل أسعار الرحلات المتاحة</p>
+            
+            <!-- كود محرك بحث Travelpayouts المباشر مع ضبط اللغة والعملة (AED + AR) -->
+            <script async src="https://tpwidg.com/content?currency=aed&trs=563695&shmarker=762582&show_hotels=true&powered_by=true&locale=ar&searchUrl=www.aviasales.com%2Fsearch&primary_override=%230a3663&color_button=%2300a8cc&color_icons=%2300a8cc&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2300a8cc&border_radius=8&plain=false&promo_id=7879&campaign_id=100" charset="utf-8"></script>
         </div>
 
+        <!-- قسم العروض السياحية -->
         <h2 style="text-align: center; margin-bottom: 20px; color: #0a3663;">أحدث العروض السياحية المميزة</h2>
         <div class="services-grid">
             <div class="card">
@@ -276,6 +232,7 @@
             </div>
         </div>
 
+        <!-- قسم التواصل الاجتماعي -->
         <div class="cta-section">
             <h2>تواصل معنا للخدمات والاستفسارات</h2>
             <div class="btn-group">
@@ -296,6 +253,7 @@
 
     </div>
 
+    <!-- زر الواتساب العائم -->
     <a href="https://api.whatsapp.com/send?phone=971557701913&text=مرحباً،%20أريد%20الاستفسار%20عن%20خدمات%20فلاي%20مسار" class="whatsapp-float" target="_blank" title="تواصل معنا على الواتساب">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
@@ -307,47 +265,6 @@
             <a href="privacy.html">سياسة الخصوصية</a>
         </div>
     </footer>
-
-    <script>
-        // معرف حساب Travelpayouts الخاص بك
-        const AFFILIATE_ID = '762582';
-        
-        const container = document.getElementById('tp-widget-container');
-        const langSelect = document.getElementById('lang-select');
-        const currencySelect = document.getElementById('currency-select');
-
-        // دالة لتحميل محرك البحث ديناميكياً
-        function loadWidget(lang, currency) {
-            // حذف أي نسخة سابقة من محرك البحث
-            container.innerHTML = '';
-            
-            // إنشاء عنصر script جديد
-            const script = document.createElement('script');
-            script.async = true;
-            script.charset = 'utf-8';
-            
-            // الرابط المتقدم لتحميل محرك البحث مع تمرير المعاملات
-            script.src = `https://tpw.wayaway.io/widgets/${AFFILIATE_ID}/search_form?&locale=${lang}&currency=${currency}&powered_by=true`;
-            
-            // إضافة عنصر script إلى حاوية محرك البحث
-            container.appendChild(script);
-        }
-
-        // تحميل محرك البحث الافتراضي عند فتح الصفحة (عربي + درهم إماراتي)
-        window.addEventListener('load', () => {
-            loadWidget('ar', 'AED');
-        });
-
-        // الاستماع لتغييرات اللغة
-        langSelect.addEventListener('change', () => {
-            loadWidget(langSelect.value, currencySelect.value);
-        });
-
-        // الاستماع لتغييرات العملة
-        currencySelect.addEventListener('change', () => {
-            loadWidget(langSelect.value, currencySelect.value);
-        });
-    </style>
 
 </body>
 </html>
