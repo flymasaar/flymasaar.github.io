@@ -1,4 +1,4 @@
-here<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -43,6 +43,35 @@ here<!DOCTYPE html>
         header p {
             opacity: 0.9;
             font-size: 1.1rem;
+        }
+
+        /* تنسيق قسم اختيار اللغة والعملة */
+        .controls-section {
+            background-color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .control-group label {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .control-group select {
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+            cursor: pointer;
         }
 
         .container {
@@ -178,9 +207,26 @@ here<!DOCTYPE html>
         <p>شريكك الموثوق للسفر - أفضل عروض الطيران والأنشطة السياحية</p>
     </header>
 
+    <div class="controls-section">
+        <div class="control-group">
+            <label for="lang-select">اللغة:</label>
+            <select id="lang-select">
+                <option value="ar" selected>العربية</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="currency-select">العملة:</label>
+            <select id="currency-select">
+                <option value="AED" selected>درهم إماراتي (AED)</option>
+                <option value="USD">دولار أمريكي (USD)</option>
+                <option value="EUR">يورو (EUR)</option>
+            </select>
+        </div>
+    </div>
+
     <div class="container">
         
-        <!-- خدماتنا الأساسية -->
         <div class="services-grid">
             <div class="card">
                 <i class="fa-solid fa-plane-departure"></i>
@@ -199,21 +245,13 @@ here<!DOCTYPE html>
             </div>
         </div>
 
-        <!-- قسم البحث المباشر -->
         <div class="cta-section">
             <h2>ابحث واحجز رحلتك مباشرة</h2>
             <p>اختر الخدمة للبدء في استعراض أفضل الأسعار المتاحة</p>
-            <div class="btn-group">
-                <a href="https://api.whatsapp.com/send?phone=971557701913&text=مرحباً،%20أريد%20الاستفسار%20عن%20حجوزات%20الطيران" class="btn" style="background-color: #0a3663;" target="_blank">
-                    <i class="fa-solid fa-plane"></i> البحث عن رحلات طيران
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=971557701913&text=مرحباً،%20أريد%20الاستفسار%20عن%20حجوزات%20الفنادق" class="btn" style="background-color: #00a8cc;" target="_blank">
-                    <i class="fa-solid fa-bed"></i> البحث عن فنادق
-                </a>
-            </div>
+            <div id="tp-widget-container" style="margin-top: 20px;">
+                </div>
         </div>
 
-        <!-- قسم العروض السياحية المحدث والموسع -->
         <h2 style="text-align: center; margin-bottom: 20px; color: #0a3663;">أحدث العروض السياحية المميزة</h2>
         <div class="services-grid">
             <div class="card">
@@ -238,7 +276,6 @@ here<!DOCTYPE html>
             </div>
         </div>
 
-        <!-- قسم التواصل الاجتماعي والبريد الإلكتروني -->
         <div class="cta-section">
             <h2>تواصل معنا للخدمات والاستفسارات</h2>
             <div class="btn-group">
@@ -259,7 +296,6 @@ here<!DOCTYPE html>
 
     </div>
 
-    <!-- زر الواتساب العائم -->
     <a href="https://api.whatsapp.com/send?phone=971557701913&text=مرحباً،%20أريد%20الاستفسار%20عن%20خدمات%20فلاي%20مسار" class="whatsapp-float" target="_blank" title="تواصل معنا على الواتساب">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
@@ -271,6 +307,47 @@ here<!DOCTYPE html>
             <a href="privacy.html">سياسة الخصوصية</a>
         </div>
     </footer>
+
+    <script>
+        // معرف حساب Travelpayouts الخاص بك
+        const AFFILIATE_ID = '762582';
+        
+        const container = document.getElementById('tp-widget-container');
+        const langSelect = document.getElementById('lang-select');
+        const currencySelect = document.getElementById('currency-select');
+
+        // دالة لتحميل محرك البحث ديناميكياً
+        function loadWidget(lang, currency) {
+            // حذف أي نسخة سابقة من محرك البحث
+            container.innerHTML = '';
+            
+            // إنشاء عنصر script جديد
+            const script = document.createElement('script');
+            script.async = true;
+            script.charset = 'utf-8';
+            
+            // الرابط المتقدم لتحميل محرك البحث مع تمرير المعاملات
+            script.src = `https://tpw.wayaway.io/widgets/${AFFILIATE_ID}/search_form?&locale=${lang}&currency=${currency}&powered_by=true`;
+            
+            // إضافة عنصر script إلى حاوية محرك البحث
+            container.appendChild(script);
+        }
+
+        // تحميل محرك البحث الافتراضي عند فتح الصفحة (عربي + درهم إماراتي)
+        window.addEventListener('load', () => {
+            loadWidget('ar', 'AED');
+        });
+
+        // الاستماع لتغييرات اللغة
+        langSelect.addEventListener('change', () => {
+            loadWidget(langSelect.value, currencySelect.value);
+        });
+
+        // الاستماع لتغييرات العملة
+        currencySelect.addEventListener('change', () => {
+            loadWidget(langSelect.value, currencySelect.value);
+        });
+    </style>
 
 </body>
 </html>
