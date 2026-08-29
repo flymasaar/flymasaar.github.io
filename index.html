@@ -1,4 +1,4 @@
-i<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -102,12 +102,15 @@ i<!DOCTYPE html>
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             padding: 12px 25px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            color: #ffffff !important; /* إصلاح لون النص ليظهر باللون الأبيض الواضح */
+            color: #ffffff !important;
+            font-size: 0.95rem;
+            white-space: nowrap;
             transition: opacity 0.3s;
         }
 
@@ -126,16 +129,25 @@ i<!DOCTYPE html>
             padding: 20px;
             font-size: 0.9rem;
         }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
     <header>
-    <img src="logo.png" alt="Fly Masar Logo" style="max-width: 130px; height: auto; border-radius: 50%; background-color: #ffffff; padding: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 15px;">
-    <h1>فلاي مسار | Fly Masar</h1>
-    <p>شريكك الموثوق للسفر - أفضل عروض الطيران والأنشطة السياحية</p>
-</header>
-
+        <img src="logo.png" alt="Fly Masar Logo" style="max-width: 130px; height: auto; border-radius: 50%; background-color: #ffffff; padding: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 15px;">
+        <h1>فلاي مسار | Fly Masar</h1>
+        <p>شريكك الموثوق للسفر - أفضل عروض الطيران والأنشطة السياحية</p>
+    </header>
 
     <div class="container">
         
@@ -158,14 +170,16 @@ i<!DOCTYPE html>
             </div>
         </div>
 
-        <!-- قسم البحث المباشر (مرة واحدة فقط) -->
+        <!-- قسم البحث المباشر -->
         <div class="cta-section">
             <h2>ابحث واحجز رحلتك مباشرة</h2>
             <p>اختر الخدمة للبدء في استعراض أفضل الأسعار المتاحة</p>
             <div class="btn-group">
-                <a href="https://flymasaar.com/flights" class="btn" style="background-color: #0a3663;" target="_blank">
-<a href="https://flymasaar.com/hotels" class="btn" style="background-color: #00a8cc;" target="_blank">
-
+                <a href="https://wa.me/message/DD5HGTTYMG5MC1" class="btn" style="background-color: #0a3663;" target="_blank">
+                    <i class="fa-solid fa-plane"></i> البحث عن رحلات طيران
+                </a>
+                <a href="https://wa.me/message/DD5HGTTYMG5MC1" class="btn" style="background-color: #00a8cc;" target="_blank">
+                    <i class="fa-solid fa-bed"></i> البحث عن فنادق
                 </a>
             </div>
         </div>
@@ -201,15 +215,15 @@ i<!DOCTYPE html>
             </div>
         </div>
 
-    <div style="margin-top: 10px;">
-    <a href="about.html" style="color: white; margin: 0 10px; text-decoration: none;">من نحن</a> | 
-    <a href="privacy.html" style="color: white; margin: 0 10px; text-decoration: none;">سياسة الخصوصية</a>
-</div>
+    </div>
 
     <footer>
         <p>جميع الحقوق محفوظة &copy; 2026 فلاي مسار (Fly Masar)</p>
+        <div style="margin-top: 10px;">
+            <a href="about.html">من نحن</a> | 
+            <a href="privacy.html">سياسة الخصوصية</a>
+        </div>
     </footer>
 
 </body>
 </html>
-
