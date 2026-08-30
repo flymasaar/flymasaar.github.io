@@ -27,6 +27,25 @@
             line-height: 1.6;
         }
 
+        nav {
+            background: #002244;
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
         header {
             background: linear-gradient(135deg, var(--primary), #002244);
             color: white;
@@ -171,6 +190,14 @@
 </head>
 <body>
 
+    <!-- شريط التنقل العلوي -->
+    <nav>
+        <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+        <a href="blog.html"><i class="fa-solid fa-newspaper"></i> المدونة</a>
+        <a href="about.html"><i class="fa-solid fa-circle-info"></i> من نحن</a>
+        <a href="privacy.html"><i class="fa-solid fa-shield-halved"></i> سياسة الخصوصية</a>
+    </nav>
+
     <header>
         <img src="logo.png" alt="Fly Masar Logo" style="max-width: 130px; height: auto; border-radius: 50%; background-color: #ffffff; padding: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 15px;">
         <h1>فلاي مسار | Fly Masar</h1>
@@ -262,10 +289,10 @@
         <p>جميع الحقوق محفوظة &copy; 2026 فلاي مسار (Fly Masar)</p>
         <div style="margin-top: 10px;">
             <a href="about.html">من نحن</a> | 
+            <a href="blog.html">المدونة</a> | 
             <a href="privacy.html">سياسة الخصوصية</a>
         </div>
     </footer>
 
 </body>
 </html>
-
