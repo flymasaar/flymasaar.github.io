@@ -4,18 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>فلاي مسار | Fly Masaar</title>
+<title>فلاي مسار | Fly Masaar - للسفر والسياحة</title>
 
 <meta name="description"
-content="فلاي مسار - حجوزات طيران وفنادق وعروض سياحية من الإمارات إلى مختلف أنحاء العالم.">
+content="فلاي مسار للسفر والسياحة - حجوزات طيران وفنادق وبرامج سياحية من الإمارات إلى مختلف أنحاء العالم.">
 
-<meta name="theme-color" content="#063b68">
+<meta name="theme-color" content="#063B68">
 
 <style>
-
-/* =========================
-   GENERAL
-========================= */
 
 *{
   box-sizing:border-box;
@@ -28,8 +24,8 @@ html{
 }
 
 body{
-  font-family:Arial,Tahoma,sans-serif;
-  background:#f4f8fc;
+  font-family:Tahoma,Arial,sans-serif;
+  background:#f6f9fc;
   color:#183247;
   line-height:1.7;
 }
@@ -50,40 +46,40 @@ select{
 }
 
 section{
-  padding:70px 0;
+  padding:75px 0;
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:38px;
+  margin-bottom:42px;
 }
 
 .section-title h2{
-  color:#063b68;
-  font-size:30px;
+  color:#063B68;
+  font-size:32px;
   margin-bottom:8px;
 }
 
 .section-title p{
   color:#71808d;
-  font-size:14px;
+  font-size:15px;
 }
 
 
 /* =========================
-   NAVBAR
+HEADER
 ========================= */
 
 header{
-  background:#063b68;
   position:sticky;
   top:0;
   z-index:9999;
-  box-shadow:0 4px 18px rgba(0,0,0,.15);
+  background:#063B68;
+  box-shadow:0 4px 20px rgba(0,0,0,.15);
 }
 
 .nav{
-  min-height:68px;
+  min-height:72px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -99,27 +95,28 @@ header{
 }
 
 .brand img{
-  width:43px;
-  height:43px;
+  width:45px;
+  height:45px;
   border-radius:50%;
-  background:white;
+  background:#fff;
   object-fit:contain;
+  padding:3px;
 }
 
 .nav-links{
   display:flex;
   align-items:center;
-  gap:24px;
+  gap:27px;
 }
 
 .nav-links a{
-  color:white;
-  font-size:13px;
+  color:#fff;
+  font-size:14px;
   transition:.3s;
 }
 
 .nav-links a:hover{
-  color:#29c9e3;
+  color:#27c9e2;
 }
 
 .menu-button{
@@ -131,51 +128,54 @@ header{
 
 
 /* =========================
-   HERO
+HERO
 ========================= */
 
 .hero{
   position:relative;
   overflow:hidden;
-  background:
-  radial-gradient(circle at 15% 20%,rgba(37,199,222,.35),transparent 30%),
-  linear-gradient(135deg,#052e52,#087fa4);
   color:white;
   text-align:center;
-  padding:80px 20px 95px;
+  padding:95px 20px 110px;
+  background:
+  radial-gradient(circle at 15% 20%,rgba(39,201,226,.35),transparent 30%),
+  radial-gradient(circle at 85% 70%,rgba(255,255,255,.08),transparent 25%),
+  linear-gradient(135deg,#042d50,#0787a6);
 }
 
 .hero:after{
   content:"";
   position:absolute;
-  bottom:-70px;
+  bottom:-80px;
   left:-5%;
   width:110%;
-  height:120px;
-  background:#f4f8fc;
+  height:130px;
+  background:#f6f9fc;
   border-radius:50% 50% 0 0;
 }
 
 .hero-content{
   position:relative;
   z-index:2;
+  max-width:850px;
+  margin:auto;
 }
 
 .hero-logo{
-  width:115px;
-  height:115px;
+  width:120px;
+  height:120px;
   object-fit:contain;
-  background:white;
+  background:#fff;
   border-radius:50%;
-  padding:8px;
-  box-shadow:0 10px 35px rgba(0,0,0,.25);
-  margin-bottom:20px;
+  padding:9px;
+  box-shadow:0 12px 40px rgba(0,0,0,.25);
+  margin-bottom:22px;
 }
 
 .hero h1{
-  font-size:clamp(32px,6vw,55px);
-  line-height:1.3;
-  margin-bottom:12px;
+  font-size:clamp(34px,6vw,58px);
+  line-height:1.25;
+  margin-bottom:15px;
 }
 
 .hero h1 span{
@@ -185,26 +185,27 @@ header{
 .hero-subtitle{
   max-width:720px;
   margin:auto;
-  color:#e5f7fb;
-  font-size:17px;
+  color:#e6f7fb;
+  font-size:18px;
 }
 
 .hero-buttons{
   display:flex;
   justify-content:center;
-  gap:12px;
+  gap:14px;
   flex-wrap:wrap;
-  margin-top:30px;
+  margin-top:32px;
 }
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:7px;
+  gap:8px;
+  min-height:52px;
+  padding:14px 30px;
   border:0;
-  border-radius:35px;
-  padding:14px 28px;
+  border-radius:30px;
   font-weight:bold;
   cursor:pointer;
   transition:.3s;
@@ -216,12 +217,13 @@ header{
 
 .btn-main{
   background:#20c6df;
-  color:white;
+  color:#fff;
+  box-shadow:0 8px 25px rgba(32,198,223,.25);
 }
 
 .btn-wa{
   background:#25d366;
-  color:white;
+  color:#fff;
 }
 
 .hero-note{
@@ -232,22 +234,22 @@ header{
 
 
 /* =========================
-   SERVICES
+SERVICES
 ========================= */
 
 .services{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:22px;
 }
 
 .service{
-  background:white;
-  border-radius:20px;
-  padding:32px 22px;
+  background:#fff;
+  border:1px solid #e4edf3;
+  border-radius:22px;
+  padding:35px 25px;
   text-align:center;
-  border:1px solid #e7eef3;
-  box-shadow:0 7px 25px rgba(0,0,0,.06);
+  box-shadow:0 8px 28px rgba(0,0,0,.06);
   transition:.3s;
 }
 
@@ -256,20 +258,21 @@ header{
 }
 
 .service-icon{
-  width:70px;
-  height:70px;
-  margin:0 auto 15px;
+  width:75px;
+  height:75px;
+  margin:0 auto 17px;
   display:flex;
   align-items:center;
   justify-content:center;
   background:#eaf8fb;
-  border-radius:20px;
+  border-radius:22px;
   font-size:38px;
 }
 
 .service h3{
-  color:#063b68;
-  margin-bottom:8px;
+  color:#063B68;
+  margin-bottom:9px;
+  font-size:20px;
 }
 
 .service p{
@@ -279,7 +282,7 @@ header{
 
 
 /* =========================
-   BOOKING
+BOOKING
 ========================= */
 
 .booking-section{
@@ -287,47 +290,47 @@ header{
 }
 
 .booking-box{
-  background:white;
-  border-radius:24px;
-  padding:30px;
-  box-shadow:0 10px 35px rgba(0,0,0,.09);
-  border:1px solid #e5edf3;
+  background:#fff;
+  border-radius:25px;
+  padding:32px;
+  box-shadow:0 12px 40px rgba(0,0,0,.09);
+  border:1px solid #e1ebf1;
 }
 
 .booking-tabs{
   display:flex;
   justify-content:center;
   gap:10px;
-  margin-bottom:22px;
+  margin-bottom:25px;
 }
 
 .tab{
   border:0;
-  padding:12px 30px;
+  padding:13px 35px;
   border-radius:30px;
   background:#edf5f9;
-  color:#063b68;
+  color:#063B68;
   font-weight:bold;
   cursor:pointer;
 }
 
 .tab.active{
-  background:#063b68;
-  color:white;
+  background:#063B68;
+  color:#fff;
 }
 
 .trip-types{
   display:flex;
-  gap:10px;
   justify-content:center;
+  gap:10px;
   margin-bottom:25px;
 }
 
 .trip-type{
-  padding:9px 18px;
+  padding:9px 20px;
   border:1px solid #dbe6ec;
   border-radius:25px;
-  background:white;
+  background:#fff;
   color:#526675;
   cursor:pointer;
   font-size:13px;
@@ -343,7 +346,7 @@ header{
 .form-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:16px;
+  gap:17px;
 }
 
 .field{
@@ -361,12 +364,12 @@ header{
 .field input,
 .field select{
   width:100%;
-  height:48px;
-  border:1px solid #d7e2e9;
-  border-radius:10px;
-  padding:0 13px;
+  height:50px;
+  border:1px solid #d5e1e8;
+  border-radius:11px;
+  padding:0 14px;
   outline:none;
-  background:white;
+  background:#fff;
   color:#263f50;
   font-size:14px;
 }
@@ -379,11 +382,11 @@ header{
 
 .search-button{
   grid-column:1/-1;
-  height:52px;
+  min-height:54px;
   border:0;
-  border-radius:12px;
+  border-radius:13px;
   background:linear-gradient(90deg,#08afc9,#13c5db);
-  color:white;
+  color:#fff;
   font-size:16px;
   font-weight:bold;
   cursor:pointer;
@@ -394,20 +397,6 @@ header{
   transform:translateY(-2px);
   box-shadow:0 8px 20px rgba(9,180,207,.25);
 }
-
-.booking-message{
-  display:none;
-  margin-top:15px;
-  padding:12px;
-  border-radius:10px;
-  background:#fff4df;
-  color:#8a5b00;
-  text-align:center;
-  font-size:13px;
-}
-
-
-/* HOTEL FORM */
 
 .hotel-form{
   display:none;
@@ -423,7 +412,7 @@ header{
 
 
 /* =========================
-   OFFERS
+OFFERS
 ========================= */
 
 .offers{
@@ -434,44 +423,45 @@ header{
 
 .offer{
   overflow:hidden;
-  background:white;
-  border-radius:20px;
+  background:#fff;
+  border-radius:22px;
   border:1px solid #e4edf2;
-  box-shadow:0 7px 25px rgba(0,0,0,.07);
+  box-shadow:0 8px 28px rgba(0,0,0,.07);
   transition:.3s;
 }
 
 .offer:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
 }
 
 .offer-image{
-  min-height:145px;
+  min-height:155px;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  background:linear-gradient(135deg,#063b68,#0785a7);
-  color:white;
+  background:
+  linear-gradient(135deg,#063B68,#0785a7);
+  color:#fff;
   text-align:center;
 }
 
 .offer-image .emoji{
-  font-size:43px;
-  margin-bottom:5px;
+  font-size:45px;
+  margin-bottom:6px;
 }
 
 .offer-image h3{
-  font-size:18px;
+  font-size:19px;
 }
 
 .offer-body{
-  padding:22px;
+  padding:23px;
   text-align:center;
 }
 
 .offer-body h3{
-  color:#063b68;
+  color:#063B68;
   margin-bottom:8px;
 }
 
@@ -482,25 +472,27 @@ header{
 }
 
 .offer-price{
-  margin:12px 0;
-  font-size:23px;
+  margin:13px 0;
+  font-size:22px;
   font-weight:bold;
   color:#10a76d;
 }
 
 .small-btn{
   display:inline-flex;
-  padding:11px 22px;
+  align-items:center;
+  justify-content:center;
+  padding:11px 24px;
   border-radius:25px;
   background:#25d366;
-  color:white;
+  color:#fff;
   font-weight:bold;
   font-size:13px;
 }
 
 
 /* =========================
-   DESTINATIONS
+DESTINATIONS
 ========================= */
 
 .destinations{
@@ -510,11 +502,11 @@ header{
 }
 
 .destination{
-  background:white;
-  border-radius:18px;
-  padding:25px 15px;
+  background:#fff;
+  border-radius:20px;
+  padding:28px 15px;
   text-align:center;
-  box-shadow:0 5px 20px rgba(0,0,0,.06);
+  box-shadow:0 6px 22px rgba(0,0,0,.06);
   border:1px solid #e7eef3;
   transition:.3s;
 }
@@ -524,13 +516,13 @@ header{
 }
 
 .destination-icon{
-  font-size:43px;
-  margin-bottom:8px;
+  font-size:45px;
+  margin-bottom:9px;
 }
 
 .destination h3{
-  color:#063b68;
-  margin-bottom:4px;
+  color:#063B68;
+  margin-bottom:5px;
 }
 
 .destination p{
@@ -540,17 +532,17 @@ header{
 
 
 /* =========================
-   WHY US
+WHY US
 ========================= */
 
 .why-section{
-  background:#063b68;
-  color:white;
+  background:#063B68;
+  color:#fff;
 }
 
 .why-section .section-title h2,
 .why-section .section-title p{
-  color:white;
+  color:#fff;
 }
 
 .why-grid{
@@ -561,9 +553,9 @@ header{
 
 .why-card{
   background:rgba(255,255,255,.09);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:18px;
-  padding:28px 15px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:20px;
+  padding:30px 17px;
   text-align:center;
 }
 
@@ -572,7 +564,7 @@ header{
 }
 
 .why-card h3{
-  margin:8px 0;
+  margin:9px 0;
 }
 
 .why-card p{
@@ -582,7 +574,7 @@ header{
 
 
 /* =========================
-   STEPS
+STEPS
 ========================= */
 
 .steps{
@@ -592,31 +584,40 @@ header{
 }
 
 .step{
-  position:relative;
-  background:white;
-  padding:30px 20px;
-  border-radius:18px;
+  background:#fff;
+  padding:32px 22px;
+  border-radius:20px;
   text-align:center;
-  box-shadow:0 5px 20px rgba(0,0,0,.06);
+  box-shadow:0 6px 22px rgba(0,0,0,.06);
 }
 
 .step-number{
-  width:45px;
-  height:45px;
+  width:48px;
+  height:48px;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:#063b68;
-  color:white;
+  background:#063B68;
+  color:#fff;
   border-radius:50%;
-  margin:0 auto 12px;
+  margin:0 auto 13px;
   font-weight:bold;
   font-size:18px;
 }
 
+.step h3{
+  color:#063B68;
+  margin-bottom:7px;
+}
+
+.step p{
+  color:#71808d;
+  font-size:13px;
+}
+
 
 /* =========================
-   FAQ
+FAQ
 ========================= */
 
 .faq{
@@ -625,8 +626,8 @@ header{
 }
 
 .faq-item{
-  background:white;
-  border-radius:14px;
+  background:#fff;
+  border-radius:15px;
   margin-bottom:12px;
   box-shadow:0 4px 18px rgba(0,0,0,.05);
   overflow:hidden;
@@ -635,20 +636,21 @@ header{
 .faq-question{
   width:100%;
   border:0;
-  background:white;
-  padding:18px;
+  background:#fff;
+  padding:19px;
   text-align:right;
-  color:#063b68;
+  color:#063B68;
   font-weight:bold;
   cursor:pointer;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  font-size:14px;
 }
 
 .faq-answer{
   display:none;
-  padding:0 18px 18px;
+  padding:0 19px 19px;
   color:#71808d;
   font-size:13px;
 }
@@ -659,21 +661,21 @@ header{
 
 
 /* =========================
-   CONTACT
+CONTACT
 ========================= */
 
 .contact-box{
-  background:white;
-  border-radius:24px;
-  padding:40px 25px;
+  background:#fff;
+  border-radius:25px;
+  padding:45px 25px;
   text-align:center;
-  box-shadow:0 7px 30px rgba(0,0,0,.07);
+  box-shadow:0 8px 30px rgba(0,0,0,.07);
 }
 
 .contact-title{
-  color:#063b68;
-  font-size:28px;
-  margin-bottom:8px;
+  color:#063B68;
+  font-size:30px;
+  margin-bottom:9px;
 }
 
 .contact-text{
@@ -686,12 +688,15 @@ header{
   justify-content:center;
   gap:12px;
   flex-wrap:wrap;
-  margin-top:25px;
+  margin-top:27px;
 }
 
 .social{
-  padding:12px 22px;
-  color:white;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 24px;
+  color:#fff;
   border-radius:30px;
   font-weight:bold;
   font-size:13px;
@@ -715,14 +720,14 @@ header{
 
 
 /* =========================
-   FOOTER
+FOOTER
 ========================= */
 
 footer{
   background:#042c4f;
   color:#cfe2ea;
   text-align:center;
-  padding:30px 15px;
+  padding:32px 15px;
   font-size:12px;
 }
 
@@ -732,18 +737,18 @@ footer a{
 
 
 /* =========================
-   FLOATING WHATSAPP
+FLOATING WHATSAPP
 ========================= */
 
 .floating-whatsapp{
   position:fixed;
   bottom:20px;
   left:20px;
-  width:60px;
-  height:60px;
+  width:61px;
+  height:61px;
   border-radius:50%;
   background:#25d366;
-  color:white;
+  color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -754,14 +759,20 @@ footer a{
 }
 
 @keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}
-  70%{box-shadow:0 0 0 12px rgba(37,211,102,0)}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+  0%{
+    box-shadow:0 0 0 0 rgba(37,211,102,.5)
+  }
+  70%{
+    box-shadow:0 0 0 12px rgba(37,211,102,0)
+  }
+  100%{
+    box-shadow:0 0 0 0 rgba(37,211,102,0)
+  }
 }
 
 
 /* =========================
-   MOBILE
+MOBILE
 ========================= */
 
 @media(max-width:900px){
@@ -773,11 +784,11 @@ footer a{
   .nav-links{
     display:none;
     position:absolute;
-    top:68px;
+    top:72px;
     right:0;
     left:0;
-    background:#063b68;
-    padding:20px;
+    background:#063B68;
+    padding:22px;
     flex-direction:column;
     gap:18px;
   }
@@ -806,22 +817,31 @@ footer a{
   .steps{
     grid-template-columns:1fr;
   }
+
 }
 
 
 @media(max-width:560px){
 
   section{
-    padding:55px 0;
+    padding:58px 0;
+  }
+
+  .section-title{
+    margin-bottom:30px;
+  }
+
+  .section-title h2{
+    font-size:27px;
   }
 
   .hero{
-    padding:60px 15px 85px;
+    padding:65px 15px 90px;
   }
 
   .hero-logo{
-    width:95px;
-    height:95px;
+    width:98px;
+    height:98px;
   }
 
   .hero h1{
@@ -832,9 +852,14 @@ footer a{
     font-size:14px;
   }
 
+  .hero-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
   .hero-buttons .btn{
     width:100%;
-    max-width:280px;
+    max-width:300px;
   }
 
   .services,
@@ -853,12 +878,12 @@ footer a{
   }
 
   .booking-tabs{
-    flex-direction:row;
+    gap:7px;
   }
 
   .tab{
     flex:1;
-    padding:11px 10px;
+    padding:11px 8px;
   }
 
   .trip-types{
@@ -880,6 +905,20 @@ footer a{
     left:15px;
     bottom:15px;
   }
+
+}
+
+
+/* =========================
+ACCESSIBILITY
+========================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible{
+  outline:3px solid rgba(32,198,223,.4);
+  outline-offset:2px;
 }
 
 </style>
@@ -890,7 +929,7 @@ footer a{
 
 
 <!-- =========================
-     HEADER
+HEADER
 ========================= -->
 
 <header>
@@ -898,19 +937,37 @@ footer a{
 <div class="container nav">
 
 <a href="#home" class="brand">
-<img src="logo.png" alt="Fly Masaar">
+
+<img src="logo.png" alt="شعار فلاي مسار">
+
 <span>فلاي مسار | Fly Masaar</span>
+
 </a>
 
-<div class="menu-button" onclick="toggleMenu()">☰</div>
+
+<div class="menu-button"
+     onclick="toggleMenu()"
+     aria-label="فتح القائمة">
+
+☰
+
+</div>
+
 
 <nav class="nav-links" id="navLinks">
 
 <a href="#home">الرئيسية</a>
+
+<a href="#services">خدماتنا</a>
+
 <a href="#booking">الحجوزات</a>
+
 <a href="#offers">العروض</a>
+
 <a href="#destinations">الوجهات</a>
+
 <a href="#why">لماذا نحن</a>
+
 <a href="#contact">تواصل معنا</a>
 
 </nav>
@@ -920,9 +977,8 @@ footer a{
 </header>
 
 
-
 <!-- =========================
-     HERO
+HERO
 ========================= -->
 
 <section class="hero" id="home">
@@ -933,32 +989,50 @@ footer a{
      class="hero-logo"
      alt="شعار فلاي مسار">
 
+
 <h1>
-فلاي مسار <span>| Fly Masaar</span>
+
+سافر بثقة مع
+<span>فلاي مسار</span>
+
 </h1>
 
+
 <p class="hero-subtitle">
-شريكك الموثوق للسفر والحجوزات ✈️
-<br>
-أفضل عروض الطيران والفنادق والبرامج السياحية من الإمارات إلى مختلف أنحاء العالم.
+
+حجوزات طيران وفنادق وبرامج سياحية
+من الإمارات إلى مختلف أنحاء العالم،
+بخدمة سهلة وسريعة عبر واتساب.
+
 </p>
+
 
 <div class="hero-buttons">
 
-<a href="#booking" class="btn btn-main">
+<a href="#booking"
+   class="btn btn-main">
+
 🔎 احجز رحلتك الآن
+
 </a>
+
 
 <a href="https://wa.me/971557701913"
    target="_blank"
+   rel="noopener"
    class="btn btn-wa">
-💬 تواصل عبر واتساب
+
+💬 تحدث معنا على واتساب
+
 </a>
 
 </div>
 
+
 <p class="hero-note">
-خدمة حجز واستشارات سفر • دعم عبر واتساب
+
+خدمة حجز واستشارات سفر • دعم مباشر عبر واتساب
+
 </p>
 
 </div>
@@ -966,12 +1040,11 @@ footer a{
 </section>
 
 
-
 <!-- =========================
-     SERVICES
+SERVICES
 ========================= -->
 
-<section>
+<section id="services">
 
 <div class="container">
 
@@ -988,14 +1061,20 @@ footer a{
 
 <div class="services">
 
+
 <div class="service">
 
-<div class="service-icon">✈️</div>
+<div class="service-icon">
+✈️
+</div>
 
-<h3>حجوزات الطيران</h3>
+<h3>
+حجوزات الطيران
+</h3>
 
 <p>
-نساعدك في العثور على أفضل خيارات الرحلات والأسعار المناسبة لوجهتك.
+نساعدك في اختيار الرحلات المناسبة
+حسب وجهتك وتاريخ سفرك وميزانيتك.
 </p>
 
 </div>
@@ -1003,12 +1082,17 @@ footer a{
 
 <div class="service">
 
-<div class="service-icon">🏨</div>
+<div class="service-icon">
+🏨
+</div>
 
-<h3>حجوزات الفنادق</h3>
+<h3>
+حجوزات الفنادق
+</h3>
 
 <p>
-خيارات إقامة متعددة تناسب الأفراد والعائلات ومختلف الميزانيات.
+خيارات إقامة متنوعة للأفراد والعائلات
+بمستويات وأسعار مختلفة.
 </p>
 
 </div>
@@ -1016,15 +1100,21 @@ footer a{
 
 <div class="service">
 
-<div class="service-icon">🌍</div>
+<div class="service-icon">
+🌍
+</div>
 
-<h3>البرامج السياحية</h3>
+<h3>
+البرامج السياحية
+</h3>
 
 <p>
-برامج سياحية ورحلات متكاملة لمساعدتك على الاستمتاع بتجربة سفر مميزة.
+برامج وباقات سفر تساعدك على
+تنظيم رحلتك والاستمتاع بتجربة أفضل.
 </p>
 
 </div>
+
 
 </div>
 
@@ -1033,21 +1123,24 @@ footer a{
 </section>
 
 
-
 <!-- =========================
-     BOOKING
+BOOKING
 ========================= -->
 
-<section class="booking-section" id="booking">
+<section class="booking-section"
+         id="booking">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>🔎 احجز رحلتك بسهولة</h2>
+<h2>
+🔎 احجز رحلتك بسهولة
+</h2>
 
 <p>
-أدخل بيانات رحلتك وسنساعدك في الحصول على أفضل الخيارات
+أدخل بيانات رحلتك وسنتواصل معك عبر واتساب
+بأفضل الخيارات المتاحة.
 </p>
 
 </div>
@@ -1056,20 +1149,23 @@ footer a{
 <div class="booking-box">
 
 
-<!-- TABS -->
-
 <div class="booking-tabs">
 
 <button class="tab active"
         id="flightTab"
         onclick="showFlight()">
+
 ✈️ طيران
+
 </button>
+
 
 <button class="tab"
         id="hotelTab"
         onclick="showHotel()">
+
 🏨 فنادق
+
 </button>
 
 </div>
@@ -1077,18 +1173,27 @@ footer a{
 
 <!-- FLIGHT -->
 
-<div class="flight-form" id="flightForm">
+<div class="flight-form"
+     id="flightForm">
+
 
 <div class="trip-types">
 
-<button class="trip-type active"
+<button type="button"
+        class="trip-type active"
         onclick="setTripType('round',this)">
+
 🔄 ذهاب وعودة
+
 </button>
 
-<button class="trip-type"
+
+<button type="button"
+        class="trip-type"
         onclick="setTripType('oneway',this)">
+
 ➡️ ذهاب فقط
+
 </button>
 
 </div>
@@ -1101,7 +1206,9 @@ footer a{
 
 <div class="field">
 
-<label>📍 من</label>
+<label>
+📍 مدينة المغادرة
+</label>
 
 <input
 id="from"
@@ -1114,7 +1221,9 @@ required>
 
 <div class="field">
 
-<label>📍 إلى</label>
+<label>
+📍 الوجهة
+</label>
 
 <input
 id="to"
@@ -1127,7 +1236,9 @@ required>
 
 <div class="field">
 
-<label>📅 تاريخ المغادرة</label>
+<label>
+📅 تاريخ المغادرة
+</label>
 
 <input
 id="departure"
@@ -1140,7 +1251,9 @@ required>
 <div class="field"
      id="returnField">
 
-<label>📅 تاريخ العودة</label>
+<label>
+📅 تاريخ العودة
+</label>
 
 <input
 id="returnDate"
@@ -1151,7 +1264,9 @@ type="date">
 
 <div class="field">
 
-<label>👥 المسافرون</label>
+<label>
+👥 المسافرون
+</label>
 
 <select id="passengers">
 
@@ -1171,7 +1286,9 @@ type="date">
 
 <div class="field">
 
-<label>💺 درجة السفر</label>
+<label>
+💺 درجة السفر
+</label>
 
 <select id="class">
 
@@ -1192,6 +1309,7 @@ type="date">
 
 </button>
 
+
 </div>
 
 </form>
@@ -1199,11 +1317,11 @@ type="date">
 </div>
 
 
-
 <!-- HOTEL -->
 
 <div class="hotel-form"
      id="hotelForm">
+
 
 <form onsubmit="sendHotel(event)">
 
@@ -1212,7 +1330,9 @@ type="date">
 
 <div class="field">
 
-<label>📍 المدينة / الوجهة</label>
+<label>
+📍 المدينة / الوجهة
+</label>
 
 <input
 id="hotelCity"
@@ -1225,7 +1345,9 @@ required>
 
 <div class="field">
 
-<label>📅 تاريخ الوصول</label>
+<label>
+📅 تاريخ الوصول
+</label>
 
 <input
 id="checkin"
@@ -1237,7 +1359,9 @@ required>
 
 <div class="field">
 
-<label>📅 تاريخ المغادرة</label>
+<label>
+📅 تاريخ المغادرة
+</label>
 
 <input
 id="checkout"
@@ -1249,7 +1373,9 @@ required>
 
 <div class="field">
 
-<label>👥 عدد النزلاء</label>
+<label>
+👥 عدد النزلاء
+</label>
 
 <select id="guests">
 
@@ -1266,7 +1392,9 @@ required>
 
 <div class="field">
 
-<label>🛏️ الغرف</label>
+<label>
+🛏️ الغرف
+</label>
 
 <select id="rooms">
 
@@ -1282,7 +1410,9 @@ required>
 
 <div class="field">
 
-<label>⭐ مستوى الفندق</label>
+<label>
+⭐ مستوى الفندق
+</label>
 
 <select id="hotelStars">
 
@@ -1303,12 +1433,12 @@ required>
 
 </button>
 
+
 </div>
 
 </form>
 
 </div>
-
 
 </div>
 
@@ -1317,9 +1447,8 @@ required>
 </section>
 
 
-
 <!-- =========================
-     OFFERS
+OFFERS
 ========================= -->
 
 <section id="offers">
@@ -1328,10 +1457,12 @@ required>
 
 <div class="section-title">
 
-<h2>🔥 أحدث العروض</h2>
+<h2>
+🔥 عروض السفر
+</h2>
 
 <p>
-عروض مميزة قابلة للتحديث حسب الموسم والأسعار
+اطلب عرضك وسنبحث لك عن أفضل الخيارات المتاحة
 </p>
 
 </div>
@@ -1344,18 +1475,26 @@ required>
 
 <div class="offer-image">
 
-<div class="emoji">🇦🇪 ✈️ 🇪🇬</div>
+<div class="emoji">
+🇦🇪 ✈️ 🇪🇬
+</div>
 
-<h3>الإمارات → مصر</h3>
+<h3>
+الإمارات → مصر
+</h3>
 
 </div>
 
+
 <div class="offer-body">
 
-<h3>رحلات القاهرة</h3>
+<h3>
+رحلات القاهرة
+</h3>
 
 <p>
-عروض خاصة على الرحلات من الإمارات إلى القاهرة.
+خيارات رحلات من الإمارات إلى القاهرة
+حسب تاريخ سفرك.
 </p>
 
 <div class="offer-price">
@@ -1364,7 +1503,8 @@ required>
 
 <a class="small-btn"
 href="https://wa.me/971557701913?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20رحلات%20الإمارات%20إلى%20القاهرة"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 استفسر عن العرض
 
@@ -1375,32 +1515,40 @@ target="_blank">
 </div>
 
 
-
 <div class="offer">
 
 <div class="offer-image">
 
-<div class="emoji">🇦🇪 ✈️ 🇮🇳</div>
+<div class="emoji">
+🇦🇪 ✈️ 🇮🇳
+</div>
 
-<h3>الإمارات → الهند</h3>
+<h3>
+الإمارات → الهند
+</h3>
 
 </div>
 
+
 <div class="offer-body">
 
-<h3>عروض الهند</h3>
+<h3>
+عروض الهند
+</h3>
 
 <p>
-رحلات إلى مختلف المدن الهندية بأسعار تنافسية.
+رحلات إلى مختلف المدن الهندية
+بخيارات متعددة.
 </p>
 
 <div class="offer-price">
-أفضل سعر
+أفضل سعر متاح
 </div>
 
 <a class="small-btn"
 href="https://wa.me/971557701913?text=السلام%20عليكم،%20أريد%20عرض%20رحلة%20إلى%20الهند"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 استفسر عن العرض
 
@@ -1411,23 +1559,30 @@ target="_blank">
 </div>
 
 
-
 <div class="offer">
 
 <div class="offer-image">
 
-<div class="emoji">✈️ 🏨</div>
+<div class="emoji">
+✈️ 🏨
+</div>
 
-<h3>طيران + فندق</h3>
+<h3>
+طيران + فندق
+</h3>
 
 </div>
 
+
 <div class="offer-body">
 
-<h3>باقة سفر متكاملة</h3>
+<h3>
+باقة سفر متكاملة
+</h3>
 
 <p>
-اطلب عرضاً يجمع بين تذاكر الطيران والإقامة الفندقية.
+اطلب عرضاً يجمع بين تذاكر الطيران
+والإقامة الفندقية.
 </p>
 
 <div class="offer-price">
@@ -1436,9 +1591,10 @@ target="_blank">
 
 <a class="small-btn"
 href="https://wa.me/971557701913?text=السلام%20عليكم،%20أريد%20عرض%20طيران%20وفندق"
-target="_blank">
+target="_blank"
+rel="noopener">
 
-استفسر عن العرض
+اطلب العرض
 
 </a>
 
@@ -1454,9 +1610,8 @@ target="_blank">
 </section>
 
 
-
 <!-- =========================
-     DESTINATIONS
+DESTINATIONS
 ========================= -->
 
 <section id="destinations">
@@ -1465,7 +1620,9 @@ target="_blank">
 
 <div class="section-title">
 
-<h2>🌍 وجهات مميزة</h2>
+<h2>
+🌍 وجهات مميزة
+</h2>
 
 <p>
 اختر وجهتك ودعنا نساعدك في ترتيب رحلتك
@@ -1479,9 +1636,13 @@ target="_blank">
 
 <div class="destination">
 
-<div class="destination-icon">🇪🇬</div>
+<div class="destination-icon">
+🇪🇬
+</div>
 
-<h3>مصر</h3>
+<h3>
+مصر
+</h3>
 
 <p>
 القاهرة • الغردقة • شرم الشيخ
@@ -1492,9 +1653,13 @@ target="_blank">
 
 <div class="destination">
 
-<div class="destination-icon">🇮🇳</div>
+<div class="destination-icon">
+🇮🇳
+</div>
 
-<h3>الهند</h3>
+<h3>
+الهند
+</h3>
 
 <p>
 دلهي • مومباي • كيرلا وغيرها
@@ -1505,9 +1670,13 @@ target="_blank">
 
 <div class="destination">
 
-<div class="destination-icon">🇹🇷</div>
+<div class="destination-icon">
+🇹🇷
+</div>
 
-<h3>تركيا</h3>
+<h3>
+تركيا
+</h3>
 
 <p>
 إسطنبول وأجمل الوجهات التركية
@@ -1518,15 +1687,20 @@ target="_blank">
 
 <div class="destination">
 
-<div class="destination-icon">🇫🇷</div>
+<div class="destination-icon">
+🇫🇷
+</div>
 
-<h3>فرنسا</h3>
+<h3>
+فرنسا
+</h3>
 
 <p>
 باريس وأجمل المدن الأوروبية
 </p>
 
 </div>
+
 
 </div>
 
@@ -1535,21 +1709,23 @@ target="_blank">
 </section>
 
 
-
 <!-- =========================
-     WHY US
+WHY US
 ========================= -->
 
-<section class="why-section" id="why">
+<section class="why-section"
+         id="why">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>⭐ لماذا فلاي مسار؟</h2>
+<h2>
+⭐ لماذا فلاي مسار؟
+</h2>
 
 <p>
-نهتم بتجربة سفرك من أول خطوة حتى العودة
+نهتم بتجربة سفرك من أول خطوة
 </p>
 
 </div>
@@ -1560,12 +1736,17 @@ target="_blank">
 
 <div class="why-card">
 
-<div class="why-icon">💰</div>
+<div class="why-icon">
+💰
+</div>
 
-<h3>أسعار منافسة</h3>
+<h3>
+أسعار منافسة
+</h3>
 
 <p>
-نبحث عن أفضل الخيارات المتاحة حسب طلبك.
+نبحث عن الخيارات المناسبة لطلبك
+ونساعدك في الوصول إلى أفضل سعر متاح.
 </p>
 
 </div>
@@ -1573,12 +1754,17 @@ target="_blank">
 
 <div class="why-card">
 
-<div class="why-icon">⚡</div>
+<div class="why-icon">
+⚡
+</div>
 
-<h3>خدمة سريعة</h3>
+<h3>
+استجابة سريعة
+</h3>
 
 <p>
-تواصل معنا واحصل على المساعدة في أسرع وقت.
+تواصل معنا عبر واتساب واحصل على
+المساعدة بأسرع وقت ممكن.
 </p>
 
 </div>
@@ -1586,12 +1772,17 @@ target="_blank">
 
 <div class="why-card">
 
-<div class="why-icon">🤝</div>
+<div class="why-icon">
+🤝
+</div>
 
-<h3>خدمة موثوقة</h3>
+<h3>
+خدمة موثوقة
+</h3>
 
 <p>
-نهتم بتقديم تجربة واضحة ومريحة للعملاء.
+نهتم بالوضوح وسهولة التواصل
+في كل خطوة من خطوات الحجز.
 </p>
 
 </div>
@@ -1599,12 +1790,17 @@ target="_blank">
 
 <div class="why-card">
 
-<div class="why-icon">🌍</div>
+<div class="why-icon">
+🌍
+</div>
 
-<h3>وجهات متعددة</h3>
+<h3>
+وجهات متعددة
+</h3>
 
 <p>
-خيارات سفر إلى مختلف أنحاء العالم.
+خيارات سفر إلى العديد من الوجهات
+حول العالم.
 </p>
 
 </div>
@@ -1617,9 +1813,8 @@ target="_blank">
 </section>
 
 
-
 <!-- =========================
-     HOW IT WORKS
+HOW IT WORKS
 ========================= -->
 
 <section>
@@ -1628,7 +1823,9 @@ target="_blank">
 
 <div class="section-title">
 
-<h2>✈️ كيف تحجز معنا؟</h2>
+<h2>
+✈️ كيف تحجز معنا؟
+</h2>
 
 <p>
 ثلاث خطوات بسيطة
@@ -1642,12 +1839,17 @@ target="_blank">
 
 <div class="step">
 
-<div class="step-number">1</div>
+<div class="step-number">
+1
+</div>
 
-<h3>أرسل طلبك</h3>
+<h3>
+أرسل طلبك
+</h3>
 
 <p>
-أدخل بيانات رحلتك في نموذج الحجز.
+أدخل بيانات الرحلة أو الفندق
+في نموذج الحجز.
 </p>
 
 </div>
@@ -1655,12 +1857,17 @@ target="_blank">
 
 <div class="step">
 
-<div class="step-number">2</div>
+<div class="step-number">
+2
+</div>
 
-<h3>نبحث لك عن أفضل خيار</h3>
+<h3>
+نبحث لك عن أفضل الخيارات
+</h3>
 
 <p>
-سنراجع الخيارات المناسبة لطلبك.
+نراجع الخيارات المناسبة
+حسب طلبك.
 </p>
 
 </div>
@@ -1668,12 +1875,17 @@ target="_blank">
 
 <div class="step">
 
-<div class="step-number">3</div>
+<div class="step-number">
+3
+</div>
 
-<h3>استلم عرضك</h3>
+<h3>
+استلم عرضك
+</h3>
 
 <p>
-نتواصل معك عبر واتساب بالتفاصيل والأسعار.
+نتواصل معك عبر واتساب
+بالتفاصيل والأسعار.
 </p>
 
 </div>
@@ -1686,9 +1898,8 @@ target="_blank">
 </section>
 
 
-
 <!-- =========================
-     FAQ
+FAQ
 ========================= -->
 
 <section>
@@ -1697,10 +1908,12 @@ target="_blank">
 
 <div class="section-title">
 
-<h2>❓ الأسئلة الشائعة</h2>
+<h2>
+❓ الأسئلة الشائعة
+</h2>
 
 <p>
-إجابات سريعة على بعض الأسئلة
+إجابات سريعة على أهم الأسئلة
 </p>
 
 </div>
@@ -1714,20 +1927,26 @@ target="_blank">
 <button class="faq-question"
 onclick="toggleFaq(this)">
 
-<span>كيف أطلب سعر تذكرة؟</span>
+<span>
+كيف أطلب سعر تذكرة؟
+</span>
 
-<span>＋</span>
+<span>
+＋
+</span>
 
 </button>
 
+
 <div class="faq-answer">
 
-أدخل مدينة المغادرة والوجهة والتاريخ وعدد المسافرين في نموذج الحجز، ثم أرسل الطلب عبر واتساب.
+أدخل مدينة المغادرة والوجهة والتاريخ
+وعدد المسافرين في نموذج الحجز،
+ثم أرسل الطلب عبر واتساب.
 
 </div>
 
 </div>
-
 
 
 <div class="faq-item">
@@ -1735,20 +1954,26 @@ onclick="toggleFaq(this)">
 <button class="faq-question"
 onclick="toggleFaq(this)">
 
-<span>هل يمكنني طلب فندق فقط؟</span>
+<span>
+هل يمكنني طلب فندق فقط؟
+</span>
 
-<span>＋</span>
+<span>
+＋
+</span>
 
 </button>
 
+
 <div class="faq-answer">
 
-نعم، اختر قسم الفنادق وأدخل المدينة وتواريخ الإقامة وعدد النزلاء وسنتواصل معك بالخيارات المناسبة.
+نعم. اختر قسم الفنادق وأدخل المدينة
+وتواريخ الإقامة وعدد النزلاء،
+وسنتواصل معك بالخيارات المناسبة.
 
 </div>
 
 </div>
-
 
 
 <div class="faq-item">
@@ -1756,20 +1981,25 @@ onclick="toggleFaq(this)">
 <button class="faq-question"
 onclick="toggleFaq(this)">
 
-<span>هل يمكنني طلب طيران وفندق معاً؟</span>
+<span>
+هل يمكنني طلب طيران وفندق معاً؟
+</span>
 
-<span>＋</span>
+<span>
+＋
+</span>
 
 </button>
 
+
 <div class="faq-answer">
 
-نعم، يمكنك التواصل معنا عبر واتساب وطلب باقة طيران وفندق حسب وجهتك وميزانيتك.
+نعم، يمكنك طلب باقة طيران وفندق
+حسب الوجهة وتاريخ السفر والميزانية.
 
 </div>
 
 </div>
-
 
 
 <div class="faq-item">
@@ -1777,15 +2007,22 @@ onclick="toggleFaq(this)">
 <button class="faq-question"
 onclick="toggleFaq(this)">
 
-<span>كيف أتواصل مع فلاي مسار؟</span>
+<span>
+كيف أتواصل مع فلاي مسار؟
+</span>
 
-<span>＋</span>
+<span>
+＋
+</span>
 
 </button>
 
+
 <div class="faq-answer">
 
-يمكنك التواصل معنا مباشرة عبر واتساب أو البريد الإلكتروني أو حسابات التواصل الاجتماعي الموجودة في أسفل الموقع.
+يمكنك التواصل معنا مباشرة عبر واتساب
+أو البريد الإلكتروني أو حسابات التواصل
+الاجتماعي الموجودة في أسفل الموقع.
 
 </div>
 
@@ -1799,9 +2036,8 @@ onclick="toggleFaq(this)">
 </section>
 
 
-
 <!-- =========================
-     CONTACT
+CONTACT
 ========================= -->
 
 <section id="contact">
@@ -1811,13 +2047,17 @@ onclick="toggleFaq(this)">
 <div class="contact-box">
 
 <h2 class="contact-title">
-📞 تواصل معنا
+📞 تواصل مع فلاي مسار
 </h2>
 
 <p class="contact-text">
+
 لديك استفسار عن تذكرة أو فندق أو برنامج سياحي؟
+
 <br>
+
 فريق فلاي مسار جاهز لمساعدتك.
+
 </p>
 
 
@@ -1826,7 +2066,8 @@ onclick="toggleFaq(this)">
 
 <a class="social whatsapp"
 href="https://wa.me/971557701913"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 💬 واتساب
 
@@ -1835,7 +2076,8 @@ target="_blank">
 
 <a class="social instagram"
 href="https://instagram.com/fly_masaar_"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 📸 Instagram
 
@@ -1844,7 +2086,8 @@ target="_blank">
 
 <a class="social facebook"
 href="https://facebook.com/FlyMasaar"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 👍 Facebook
 
@@ -1868,9 +2111,8 @@ href="mailto:flymasaar1@gmail.com">
 </section>
 
 
-
 <!-- =========================
-     FOOTER
+FOOTER
 ========================= -->
 
 <footer>
@@ -1894,12 +2136,14 @@ href="mailto:flymasaar1@gmail.com">
 </footer>
 
 
-
-<!-- FLOATING WHATSAPP -->
+<!-- =========================
+FLOATING WHATSAPP
+========================= -->
 
 <a class="floating-whatsapp"
 href="https://wa.me/971557701913"
 target="_blank"
+rel="noopener"
 aria-label="واتساب فلاي مسار">
 
 💬
@@ -1907,11 +2151,11 @@ aria-label="واتساب فلاي مسار">
 </a>
 
 
-
 <script>
 
+
 /* =========================
-   MOBILE MENU
+MOBILE MENU
 ========================= */
 
 function toggleMenu(){
@@ -1924,7 +2168,7 @@ function toggleMenu(){
 
 
 /* =========================
-   BOOKING TABS
+BOOKING TABS
 ========================= */
 
 function showFlight(){
@@ -1970,7 +2214,7 @@ function showHotel(){
 
 
 /* =========================
-   TRIP TYPE
+TRIP TYPE
 ========================= */
 
 let tripType="round";
@@ -1988,7 +2232,9 @@ function setTripType(type,button){
 
   });
 
+
   button.classList.add("active");
+
 
   const returnField =
   document.getElementById("returnField");
@@ -2000,13 +2246,20 @@ function setTripType(type,button){
   if(type==="oneway"){
 
     returnField.style.opacity=".45";
+
     returnInput.disabled=true;
+
+    returnInput.required=false;
+
     returnInput.value="";
 
   }else{
 
     returnField.style.opacity="1";
+
     returnInput.disabled=false;
+
+    returnInput.required=true;
 
   }
 
@@ -2014,7 +2267,7 @@ function setTripType(type,button){
 
 
 /* =========================
-   FLIGHT WHATSAPP
+FLIGHT WHATSAPP
 ========================= */
 
 function sendFlight(event){
@@ -2025,17 +2278,22 @@ function sendFlight(event){
   const from =
   document.getElementById("from").value.trim();
 
+
   const to =
   document.getElementById("to").value.trim();
+
 
   const departure =
   document.getElementById("departure").value;
 
+
   const returnDate =
   document.getElementById("returnDate").value;
 
+
   const passengers =
   document.getElementById("passengers").value;
+
 
   const travelClass =
   document.getElementById("class").value;
@@ -2096,6 +2354,8 @@ function sendFlight(event){
 
 أرغب في الحصول على أفضل سعر وخيارات الرحلات المتاحة.`;
 
+
+
   const whatsappURL =
     "https://wa.me/971557701913?text="
     + encodeURIComponent(message);
@@ -2110,7 +2370,7 @@ function sendFlight(event){
 
 
 /* =========================
-   HOTEL WHATSAPP
+HOTEL WHATSAPP
 ========================= */
 
 function sendHotel(event){
@@ -2121,17 +2381,22 @@ function sendHotel(event){
   const city =
   document.getElementById("hotelCity").value.trim();
 
+
   const checkin =
   document.getElementById("checkin").value;
+
 
   const checkout =
   document.getElementById("checkout").value;
 
+
   const guests =
   document.getElementById("guests").value;
 
+
   const rooms =
   document.getElementById("rooms").value;
+
 
   const stars =
   document.getElementById("hotelStars").value;
@@ -2141,6 +2406,19 @@ function sendHotel(event){
 
     alert(
       "من فضلك أدخل الوجهة وتاريخ الوصول والمغادرة."
+    );
+
+    return;
+
+  }
+
+
+  if(
+    checkout < checkin
+  ){
+
+    alert(
+      "تاريخ المغادرة يجب أن يكون بعد تاريخ الوصول."
     );
 
     return;
@@ -2161,6 +2439,7 @@ function sendHotel(event){
 أرغب في الحصول على أفضل عرض فندقي متاح.`;
 
 
+
   const whatsappURL =
     "https://wa.me/971557701913?text="
     + encodeURIComponent(message);
@@ -2175,7 +2454,7 @@ function sendHotel(event){
 
 
 /* =========================
-   FAQ
+FAQ
 ========================= */
 
 function toggleFaq(button){
@@ -2183,13 +2462,31 @@ function toggleFaq(button){
   const item =
   button.parentElement;
 
+
   item.classList.toggle("open");
+
+
+  const icon =
+  button.querySelector("span:last-child");
+
+
+  if(
+    item.classList.contains("open")
+  ){
+
+    icon.textContent="−";
+
+  }else{
+
+    icon.textContent="＋";
+
+  }
 
 }
 
 
 /* =========================
-   CLOSE MOBILE MENU
+CLOSE MOBILE MENU
 ========================= */
 
 document
@@ -2211,58 +2508,71 @@ document
 
 
 /* =========================
-   DATE VALIDATION
+DATE VALIDATION
 ========================= */
 
 const today =
 new Date().toISOString().split("T")[0];
 
 
-document
-.getElementById("departure")
-.min=today;
+const departure =
+document.getElementById("departure");
 
-document
-.getElementById("returnDate")
-.min=today;
+const returnDate =
+document.getElementById("returnDate");
 
-document
-.getElementById("checkin")
-.min=today;
+const checkin =
+document.getElementById("checkin");
 
-document
-.getElementById("checkout")
-.min=today;
+const checkout =
+document.getElementById("checkout");
 
 
-document
-.getElementById("departure")
-.addEventListener(
+departure.min=today;
+returnDate.min=today;
+checkin.min=today;
+checkout.min=today;
+
+
+departure.addEventListener(
   "change",
   function(){
 
-    document
-    .getElementById("returnDate")
-    .min=this.value;
+    returnDate.min=this.value;
+
+    if(
+      returnDate.value &&
+      returnDate.value < this.value
+    ){
+
+      returnDate.value="";
+
+    }
 
   }
 );
 
 
-document
-.getElementById("checkin")
-.addEventListener(
+checkin.addEventListener(
   "change",
   function(){
 
-    document
-    .getElementById("checkout")
-    .min=this.value;
+    checkout.min=this.value;
+
+    if(
+      checkout.value &&
+      checkout.value < this.value
+    ){
+
+      checkout.value="";
+
+    }
 
   }
 );
+
 
 </script>
 
 </body>
-  </html>
+</html>
