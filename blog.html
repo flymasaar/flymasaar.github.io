@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة السفر | فلاي مسار - Fly Masar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root { --primary: #0a3663; --secondary: #00a8cc; --dark: #1e293b; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: #f0f4f8; color: var(--dark); line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--primary), #002244); color: white; padding: 40px 20px; text-align: center; }
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-content { padding: 20px; }
+        .card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.2rem; }
+        .card p { color: #64748b; font-size: 0.95rem; margin-bottom: 15px; }
+        .read-btn { display: inline-block; padding: 8px 16px; background-color: var(--secondary); color: white; text-decoration: none; border-radius: 6px; font-size: 0.9rem; font-weight: bold; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مدونة فلاي مسار</h1>
+        <p>دليلك والأفكار الملهمة لرحلتك القادمة</p>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-right"></i> العودة للرئيسية</a>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>5 نصائح للحصول على أرخص تذاكر طيران</h3>
+                    <p>تعرف على الأوقات والأسرار التي تمكنك من حجز رحلات الطيران بأقل تكلفة ممكنة.</p>
+                    <a href="article1.html" class="read-btn">اقرأ المقال</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>دليل أهم الأماكن السياحية في دبي</h3>
+                    <p>استكشف أبرز المعالم والأنشطة الترفيهية في مدينة دبي لجدول سياحي مميز.</p>
+                    <a href="article2.html" class="read-btn">اقرأ المقال</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>كيف تختار الفندق المناسب لرحلتك؟</h3>
+                    <p>عوامل مهمة يجب التأكد منها قبل حجز الإقامة الفندقية لضمان تجربة مريحة وآمنة.</p>
+                    <a href="article3.html" class="read-btn">اقرأ المقال</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
