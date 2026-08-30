@@ -1,298 +1,1045 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فلاي مسار | Fly Masar - للسفر والسياحة</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0a3663;
-            --secondary: #00a8cc;
-            --accent: #ff6b6b;
-            --light: #f8f9fa;
-            --dark: #1e293b;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <title>فلاي مسار | Fly Masaar - حجوزات طيران وفنادق</title>
 
-        body {
-            background-color: #f0f4f8;
-            color: var(--dark);
-            line-height: 1.6;
-        }
+  <meta name="description"
+        content="فلاي مسار - حجوزات طيران وفنادق وعروض سياحية من الإمارات إلى مختلف أنحاء العالم.">
 
-        nav {
-            background: #002244;
-            padding: 12px 20px;
-            text-align: center;
-        }
+  <meta name="theme-color" content="#063b68">
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        nav a:hover {
-            color: var(--secondary);
-        }
+    body {
+      font-family: Arial, "Tahoma", sans-serif;
+      background: #f3f7fb;
+      color: #183247;
+      line-height: 1.7;
+    }
 
-        header {
-            background: linear-gradient(135deg, var(--primary), #002244);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
+    .container {
+      width: min(1180px, 94%);
+      margin: auto;
+    }
 
-        header p {
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
+    /* NAVBAR */
+    header {
+      background: #063b68;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,.15);
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: 30px auto 40px;
-            padding: 0 20px;
-        }
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 20px;
+    }
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+    .brand img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: white;
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
 
-        .card i {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
+    nav a {
+      color: white;
+      font-size: 14px;
+      transition: .3s;
+    }
 
-        .card h3 {
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
+    nav a:hover {
+      color: #20c4df;
+    }
 
-        .cta-section {
-            background: white;
-            border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
+    .menu-btn {
+      display: none;
+      font-size: 27px;
+      cursor: pointer;
+    }
 
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 20px;
-        }
+    /* HERO */
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(3,45,81,.97), rgba(0,116,157,.9));
+      color: white;
+      padding: 70px 20px 85px;
+      text-align: center;
+    }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #ffffff !important;
-            font-size: 0.95rem;
-            white-space: nowrap;
-            transition: opacity 0.3s;
-        }
+    .hero-logo {
+      width: 105px;
+      height: 105px;
+      background: white;
+      border-radius: 50%;
+      padding: 7px;
+      object-fit: contain;
+      box-shadow: 0 8px 30px rgba(0,0,0,.25);
+      margin-bottom: 18px;
+    }
 
-        .btn:hover {
-            opacity: 0.9;
-        }
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 50px);
+      margin-bottom: 10px;
+    }
 
-        .btn-whatsapp { background-color: #25d366; }
-        .btn-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .btn-facebook { background-color: #1877f2; }
-        .btn-email { background-color: #ea4335; }
+    .hero h1 span {
+      color: #26c6df;
+    }
 
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 25px;
-            left: 25px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 32px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #e4f4fa;
+      font-size: 17px;
+    }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
+    .hero-buttons {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
+    .btn {
+      border: 0;
+      border-radius: 30px;
+      padding: 13px 27px;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      transition: .3s;
+    }
 
-        footer a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-        }
+    .btn-primary {
+      background: #20c7df;
+      color: white;
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #12afc7;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+    }
+
+    /* SERVICES */
+    section {
+      padding: 55px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      color: #063b68;
+      font-size: 30px;
+      margin-bottom: 7px;
+    }
+
+    .section-title p {
+      color: #71808d;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 18px;
+      box-shadow: 0 5px 22px rgba(0,0,0,.07);
+      transition: .3s;
+      border: 1px solid #e9eff4;
+    }
+
+    .service:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    }
+
+    .service-icon {
+      font-size: 43px;
+      margin-bottom: 10px;
+    }
+
+    .service h3 {
+      color: #063b68;
+      margin-bottom: 8px;
+    }
+
+    .service p {
+      color: #697a87;
+      font-size: 14px;
+    }
+
+    /* BOOKING */
+    .booking-box {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 7px 30px rgba(0,0,0,.08);
+    }
+
+    .booking-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 10px 25px;
+      border-radius: 25px;
+      background: #eef5f9;
+      color: #063b68;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background: #063b68;
+      color: white;
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field label {
+      font-size: 13px;
+      font-weight: bold;
+      color: #526675;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d9e3ea;
+      border-radius: 10px;
+      outline: none;
+      font-size: 14px;
+      background: white;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: #16b9d5;
+    }
+
+    .search-btn {
+      grid-column: 1 / -1;
+      background: #10b8d4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .search-btn:hover {
+      background: #079fb9;
+    }
+
+    /* OFFERS */
+    .offers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .offer {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 22px rgba(0,0,0,.07);
+      border: 1px solid #e8eef2;
+    }
+
+    .offer-top {
+      background: linear-gradient(135deg,#063b68,#087da1);
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .offer-top .emoji {
+      font-size: 38px;
+    }
+
+    .offer-body {
+      padding: 22px;
+      text-align: center;
+    }
+
+    .offer-body h3 {
+      color: #063b68;
+      margin-bottom: 8px;
+    }
+
+    .offer-body p {
+      font-size: 14px;
+      color: #687986;
+      min-height: 55px;
+    }
+
+    .offer-price {
+      font-size: 25px;
+      color: #0aaf73;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    /* DESTINATIONS */
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .destination {
+      background: white;
+      border-radius: 16px;
+      padding: 25px 15px;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+      transition: .3s;
+    }
+
+    .destination:hover {
+      transform: scale(1.03);
+    }
+
+    .destination .icon {
+      font-size: 35px;
+    }
+
+    .destination h3 {
+      margin-top: 8px;
+      color: #063b68;
+    }
+
+    /* WHY US */
+    .why {
+      background: #063b68;
+      color: white;
+    }
+
+    .why .section-title h2,
+    .why .section-title p {
+      color: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .why-card {
+      background: rgba(255,255,255,.09);
+      padding: 25px 15px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .why-card .icon {
+      font-size: 35px;
+    }
+
+    .why-card h3 {
+      margin: 8px 0;
+    }
+
+    .why-card p {
+      font-size: 13px;
+      color: #d6e8f0;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: white;
+      border-radius: 20px;
+      padding: 35px 20px;
+      text-align: center;
+      box-shadow: 0 5px 25px rgba(0,0,0,.08);
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .social {
+      padding: 12px 22px;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .wa { background: #25d366; }
+    .instagram { background: #d62976; }
+    .facebook { background: #1877f2; }
+    .email { background: #e74c3c; }
+
+    /* FOOTER */
+    footer {
+      background: #042c4f;
+      color: #d7e8f0;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #53d4e8;
+    }
+
+    /* FLOATING WHATSAPP */
+    .floating-wa {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      z-index: 2000;
+      box-shadow: 0 5px 20px rgba(0,0,0,.25);
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        right: 0;
+        left: 0;
+        background: #063b68;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .services,
+      .offers {
+        grid-template-columns: 1fr;
+      }
+
+      .destinations {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .search-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .hero {
+        padding: 50px 15px 65px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .search-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .destinations,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-box {
+        padding: 18px;
+      }
+
+      .brand {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- شريط التنقل العلوي -->
-    <nav>
-        <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
-        <a href="blog.html"><i class="fa-solid fa-newspaper"></i> المدونة</a>
-        <a href="about.html"><i class="fa-solid fa-circle-info"></i> من نحن</a>
-        <a href="privacy.html"><i class="fa-solid fa-shield-halved"></i> سياسة الخصوصية</a>
+<!-- NAVIGATION -->
+<header>
+  <div class="container nav">
+
+    <a href="#home" class="brand">
+      <img src="logo.png" alt="Fly Masaar">
+      <span>فلاي مسار | Fly Masaar</span>
+    </a>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
+      <a href="#home">الرئيسية</a>
+      <a href="#booking">الحجوزات</a>
+      <a href="#offers">العروض</a>
+      <a href="#destinations">الوجهات</a>
+      <a href="#contact">تواصل معنا</a>
     </nav>
 
-    <header>
-        <img src="logo.png" alt="Fly Masar Logo" style="max-width: 130px; height: auto; border-radius: 50%; background-color: #ffffff; padding: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 15px;">
-        <h1>فلاي مسار | Fly Masar</h1>
-        <p>شريكك الموثوق للسفر - أفضل عروض الطيران والأنشطة السياحية</p>
-    </header>
+  </div>
+</header>
 
-    <div class="container">
-        
-        <!-- خدماتنا الأساسية -->
-        <div class="services-grid">
-            <div class="card">
-                <i class="fa-solid fa-plane-departure"></i>
-                <h3>حجوزات طيران</h3>
-                <p>نوفر أفضل الأسعار والعروض على مختلف الخطوط الجوية العالمية.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-hotel"></i>
-                <h3>حجوزات فنادق</h3>
-                <p>إقامات متميزة وفنادق تناسب جميع الميزانيات حول العالم.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-map-location-dot"></i>
-                <h3>برامج سياحية</h3>
-                <p>جولات أنشطة برامج ترفيهية متكاملة للأفراد والعائلات.</p>
-            </div>
-        </div>
 
-        <!-- قسم محرك البحث المباشر -->
-        <div class="cta-section">
-            <h2 style="margin-bottom: 10px; color: #0a3663;">ابحث واحجز رحلتك وفندقك مباشرة</h2>
-            <p style="margin-bottom: 20px; color: #666;">اختر وجهتك واستعرض أفضل الأسعار بالدرهم الإماراتي</p>
-            
-            <!-- محرك البحث باللغة العربية والدرهم الإماراتي -->
-            <script async src="https://tpwidg.com/content?currency=aed&trs=563695&shmarker=762582&show_hotels=true&powered_by=true&locale=ar&searchUrl=www.aviasales.com%2Fsearch&primary_override=%230a3663&color_button=%2300a8cc&color_icons=%2300a8cc&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2300a8cc&border_radius=8&plain=false&promo_id=7879&campaign_id=100" charset="utf-8"></script>
-        </div>
+<!-- HERO -->
+<section class="hero" id="home">
 
-        <!-- قسم العروض السياحية -->
-        <h2 style="text-align: center; margin-bottom: 20px; color: #0a3663;">أحدث العروض السياحية المميزة</h2>
-        <div class="services-grid">
-            <div class="card">
-                <h3>عرض دبي الشامل</h3>
-                <p>تذاكر طيران + إقامة 5 أيام في فندق 4 نجوم + جولة سياحية شاملة.</p>
-                <a href="https://api.whatsapp.com/send?phone=971557701913&text=مرحباً،%20أريد%20الاستفسار%20عن%20عرض%20دبي%20الشامل" class="btn btn-whatsapp" style="margin-top: 15px;" target="_blank">استفسر عن العرض</a>
-            </div>
-            <div class="card">
-                <h3>رحلات القاهرة المميزة</h3>
-                <p>عرض خاص يشمل الطيران والإقامة مع وجبة الإفطار والبرامج الترفيهية.</p>
-                <a href="https://api.whatsapp.com/send?phone=971557701913&text=مرحباً،%20أريد%20الاستفسار%20عن%20رحلات%20القاهرة%20المميزة" class="btn btn-whatsapp" style="margin-top: 15px;" target="_blank">استفسر عن العرض</a>
-            </div>
-            <div class="card">
-                <h3>باقة إسطنبول الساحرة</h3>
-                <p>إقامة 6 أيام في قلب المدينة مع رحلة البوسفور الشاملة والمواصلات.</p>
-                <a href="https://api.whatsapp.com/send?phone=971557701913&text=مرحباً،%20أريد%20الاستفسار%20عن%20باقة%20إسطنبول%20الساحرة" class="btn btn-whatsapp" style="margin-top: 15px;" target="_blank">استفسر عن العرض</a>
-            </div>
-            <div class="card">
-                <h3>عروض العمرة والزيارة</h3>
-                <p>برامج متكاملة تشمل الطيران والإقامة الفندقية القريبة من الحرمين مع المواصلات.</p>
-                <a href="https://api.whatsapp.com/send?phone=971557701913&text=مرحباً،%20أريد%20الاستفسار%20عن%20عروض%20العمرة%20والزيارة" class="btn btn-whatsapp" style="margin-top: 15px;" target="_blank">استفسر عن العرض</a>
-            </div>
-        </div>
+  <img src="logo.png" class="hero-logo" alt="شعار فلاي مسار">
 
-        <!-- قسم التواصل الاجتماعي -->
-        <div class="cta-section">
-            <h2>تواصل معنا للخدمات والاستفسارات</h2>
-            <div class="btn-group">
-                <a href="https://api.whatsapp.com/send?phone=971557701913" class="btn btn-whatsapp" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر
-                </a>
-                <a href="mailto:flymasaar1@gmail.com" class="btn btn-email" target="_blank">
-                    <i class="fa-solid fa-envelope"></i> البريد الإلكتروني
-                </a>
-                <a href="https://www.instagram.com/fly_masaar" class="btn btn-instagram" target="_blank">
-                    <i class="fa-brands fa-instagram"></i> انستغرام
-                </a>
-                <a href="https://www.facebook.com/share/18xKCsxk6C/" class="btn btn-facebook" target="_blank">
-                    <i class="fa-brands fa-facebook"></i> فيسبوك
-                </a>
-            </div>
-        </div>
+  <h1>
+    فلاي مسار <span>| Fly Masaar</span>
+  </h1>
+
+  <p>
+    شريكك الموثوق للسفر والحجوزات ✈️
+    أفضل عروض الطيران والفنادق والبرامج السياحية من الإمارات إلى العالم.
+  </p>
+
+  <div class="hero-buttons">
+
+    <a class="btn btn-primary" href="#booking">
+      🔎 ابحث عن رحلتك
+    </a>
+
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/971557701913"
+       target="_blank">
+      💬 تواصل عبر واتساب
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <h2>خدماتنا</h2>
+      <p>كل ما تحتاجه لرحلة مريحة في مكان واحد</p>
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="service-icon">✈️</div>
+        <h3>حجوزات الطيران</h3>
+        <p>
+          أفضل الأسعار والعروض على الرحلات الجوية إلى مختلف الوجهات العالمية.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🏨</div>
+        <h3>حجوزات الفنادق</h3>
+        <p>
+          اختر من مجموعة كبيرة من الفنادق والإقامات حول العالم.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🌍</div>
+        <h3>البرامج السياحية</h3>
+        <p>
+          برامج سياحية متكاملة للأفراد والعائلات حسب احتياجاتك.
+        </p>
+      </div>
 
     </div>
 
-    <!-- زر الواتساب العائم -->
-    <a href="https://api.whatsapp.com/send?phone=971557701913&text=مرحباً،%20أريد%20الاستفسار%20عن%20خدمات%20فلاي%20مسار" class="whatsapp-float" target="_blank" title="تواصل معنا على الواتساب">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+  </div>
+</section>
 
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 فلاي مسار (Fly Masar)</p>
-        <div style="margin-top: 10px;">
-            <a href="about.html">من نحن</a> | 
-            <a href="blog.html">المدونة</a> | 
-            <a href="privacy.html">سياسة الخصوصية</a>
+
+<!-- BOOKING -->
+<section id="booking">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>احجز رحلتك بسهولة</h2>
+      <p>أدخل بيانات رحلتك وسنتواصل معك بأفضل الخيارات</p>
+    </div>
+
+    <div class="booking-box">
+
+      <div class="booking-tabs">
+        <div class="tab active">✈️ طيران</div>
+        <div class="tab">🏨 فنادق</div>
+      </div>
+
+      <form onsubmit="sendBooking(event)">
+
+        <div class="search-grid">
+
+          <div class="field">
+            <label>من</label>
+            <input id="from" type="text"
+                   placeholder="مثال: أبوظبي">
+          </div>
+
+          <div class="field">
+            <label>إلى</label>
+            <input id="to" type="text"
+                   placeholder="مثال: القاهرة">
+          </div>
+
+          <div class="field">
+            <label>تاريخ المغادرة</label>
+            <input id="departure" type="date">
+          </div>
+
+          <div class="field">
+            <label>تاريخ العودة</label>
+            <input id="returnDate" type="date">
+          </div>
+
+          <div class="field">
+            <label>عدد المسافرين</label>
+            <select id="passengers">
+              <option>1 مسافر</option>
+              <option>2 مسافرين</option>
+              <option>3 مسافرين</option>
+              <option>4 مسافرين</option>
+              <option>5 مسافرين</option>
+              <option>6 مسافرين أو أكثر</option>
+            </select>
+          </div>
+
+          <button class="search-btn" type="submit">
+            🔎 اطلب أفضل سعر عبر واتساب
+          </button>
+
         </div>
-    </footer>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- OFFERS -->
+<section id="offers">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>🔥 أحدث العروض السياحية</h2>
+      <p>عروض مميزة قابلة للتحديث حسب الموسم والأسعار</p>
+    </div>
+
+    <div class="offers">
+
+      <div class="offer">
+        <div class="offer-top">
+          <div class="emoji">🇦🇪 ✈️ 🇪🇬</div>
+          <h3>الإمارات → مصر</h3>
+        </div>
+
+        <div class="offer-body">
+          <h3>رحلات القاهرة</h3>
+          <p>
+            عروض خاصة على الرحلات من الإمارات إلى القاهرة.
+          </p>
+
+          <div class="offer-price">
+            استفسر عن السعر
+          </div>
+
+          <a class="btn btn-whatsapp"
+             href="https://wa.me/971557701913?text=أريد%20الاستفسار%20عن%20رحلات%20القاهرة"
+             target="_blank">
+            استفسر عن العرض
+          </a>
+        </div>
+      </div>
+
+
+      <div class="offer">
+        <div class="offer-top">
+          <div class="emoji">🇦🇪 🌍</div>
+          <h3>عروض دولية</h3>
+        </div>
+
+        <div class="offer-body">
+          <h3>أفضل الوجهات</h3>
+          <p>
+            اختر وجهتك وسنبحث لك عن أفضل الخيارات والأسعار.
+          </p>
+
+          <div class="offer-price">
+            أفضل سعر
+          </div>
+
+          <a class="btn btn-whatsapp"
+             href="https://wa.me/971557701913?text=أريد%20أفضل%20عرض%20لرحلة%20دولية"
+             target="_blank">
+            استفسر عن العرض
+          </a>
+        </div>
+      </div>
+
+
+      <div class="offer">
+        <div class="offer-top">
+          <div class="emoji">🏨 ✈️</div>
+          <h3>طيران + فندق</h3>
+        </div>
+
+        <div class="offer-body">
+          <h3>باقة سفر متكاملة</h3>
+          <p>
+            خطط لرحلتك واحصل على خيارات الطيران والفندق في مكان واحد.
+          </p>
+
+          <div class="offer-price">
+            اطلب عرضك
+          </div>
+
+          <a class="btn btn-whatsapp"
+             href="https://wa.me/971557701913?text=أريد%20عرض%20طيران%20وفندق"
+             target="_blank">
+            استفسر عن العرض
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DESTINATIONS -->
+<section id="destinations">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>🌍 وجهات مميزة</h2>
+      <p>اختر وجهتك وسنساعدك في ترتيب رحلتك</p>
+    </div>
+
+    <div class="destinations">
+
+      <div class="destination">
+        <div class="icon">🇪🇬</div>
+        <h3>مصر</h3>
+        <p>القاهرة والغردقة وشرم الشيخ</p>
+      </div>
+
+      <div class="destination">
+        <div class="icon">🇮🇳</div>
+        <h3>الهند</h3>
+        <p>رحلات إلى مختلف المدن الهندية</p>
+      </div>
+
+      <div class="destination">
+        <div class="icon">🇹🇷</div>
+        <h3>تركيا</h3>
+        <p>إسطنبول وأجمل الوجهات التركية</p>
+      </div>
+
+      <div class="destination">
+        <div class="icon">🇫🇷</div>
+        <h3>فرنسا</h3>
+        <p>باريس وأجمل المدن الأوروبية</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section class="why">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>لماذا فلاي مسار؟</h2>
+      <p>نهتم بتجربة سفرك من أول خطوة حتى العودة</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <div class="icon">💰</div>
+        <h3>أسعار منافسة</h3>
+        <p>نبحث عن أفضل الخيارات المتاحة لرحلتك.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon">⚡</div>
+        <h3>سرعة الخدمة</h3>
+        <p>تواصل معنا واحصل على الرد بأسرع وقت.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon">🤝</div>
+        <h3>خدمة موثوقة</h3>
+        <p>نهتم بتقديم خدمة واضحة ومريحة لعملائنا.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon">🌍</div>
+        <h3>وجهات متعددة</h3>
+        <p>خيارات سفر إلى مختلف أنحاء العالم.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <div class="section-title">
+        <h2>📞 تواصل معنا</h2>
+        <p>
+          لديك استفسار عن تذكرة، فندق أو برنامج سياحي؟
+          نحن جاهزون لمساعدتك.
+        </p>
+      </div>
+
+      <div class="contact-buttons">
+
+        <a class="social wa"
+           href="https://wa.me/971557701913"
+           target="_blank">
+          💬 واتساب
+        </a>
+
+        <a class="social instagram"
+           href="https://instagram.com/fly_masaar_"
+           target="_blank">
+          📸 Instagram
+        </a>
+
+        <a class="social facebook"
+           href="https://facebook.com/FlyMasaar"
+           target="_blank">
+          👍 Facebook
+        </a>
+
+        <a class="social email"
+           href="mailto:flymasaar1@gmail.com">
+          ✉️ البريد الإلكتروني
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <p>
+    © 2026 Fly Masaar | فلاي مسار
+  </p>
+
+  <p>
+    جميع الحقوق محفوظة
+  </p>
+
+  <p style="margin-top:8px;">
+    <a href="privacy.html">سياسة الخصوصية</a>
+  </p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+<a class="floating-wa"
+   href="https://wa.me/971557701913"
+   target="_blank"
+   aria-label="تواصل معنا عبر واتساب">
+  ☎
+</a>
+
+
+<script>
+
+  /* MOBILE MENU */
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+  }
+
+
+  /* BOOKING TO WHATSAPP */
+  function sendBooking(event) {
+
+    event.preventDefault();
+
+    const from =
+      document.getElementById("from").value.trim();
+
+    const to =
+      document.getElementById("to").value.trim();
+
+    const departure =
+      document.getElementById("departure").value;
+
+    const returnDate =
+      document.getElementById("returnDate").value;
+
+    const passengers =
+      document.getElementById("passengers").value;
+
+
+    if (!from || !to || !departure) {
+
+      alert("من فضلك أدخل مدينة المغادرة والوجهة وتاريخ المغادرة.");
+
+      return;
+    }
+
+
+    let message =
+      "✈️ طلب حجز جديد - فلاي مسار%0A%0A" +
+
+      "📍 من: " + encodeURIComponent(from) + "%0A" +
+
+      "📍 إلى: " + encodeURIComponent(to) + "%0A" +
+
+      "📅 المغادرة: " + encodeURIComponent(departure) + "%0A";
+
+
+    if (returnDate) {
+
+      message +=
+        "📅 العودة: " +
+        encodeURIComponent(returnDate) +
+        "%0A";
+
+    }
+
+
+    message +=
+      "👥 المسافرون: " +
+      encodeURIComponent(passengers) +
+      "%0A%0A" +
+
+      "أرغب في الحصول على أفضل سعر متاح.";
+
+
+    window.open(
+      "https://wa.me/971557701913?text=" + message,
+      "_blank"
+    );
+
+  }
+
+</script>
 
 </body>
 </html>
