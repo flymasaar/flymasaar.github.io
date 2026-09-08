@@ -2432,9 +2432,6 @@ onclick="openWhatsApp()">
 💬 واتساب
 </button>
 
-
-<!-- ضع رابط Instagram الحقيقي هنا -->
-
 <a
 class="social instagram"
 href="https://instagram.com/"
@@ -2443,9 +2440,6 @@ rel="noopener">
 📸 Instagram
 </a>
 
-
-<!-- ضع رابط Facebook الحقيقي هنا -->
-
 <a
 class="social facebook"
 href="https://facebook.com/"
@@ -2453,7 +2447,6 @@ target="_blank"
 rel="noopener">
 👍 Facebook
 </a>
-
 
 <a
 class="social email"
@@ -2581,193 +2574,76 @@ onclick="closeTerms()">
    FLY MASAAR JAVASCRIPT
    ========================================================= */
 
-
-/* =========================================================
-   1. رقم واتساب
-   ========================================================= */
-
 const WHATSAPP_NUMBER = "971557701913";
-
-
-/* =========================================================
-   فتح واتساب
-   ========================================================= */
 
 function openWhatsApp(
   message = "مرحباً فلاي مسار 👋 أريد الاستفسار عن حجز."
 ) {
-
   const text = encodeURIComponent(message);
-
-  const url =
-    "https://wa.me/" +
-    WHATSAPP_NUMBER +
-    "?text=" +
-    text;
-
+  const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text;
   window.open(url, "_blank");
-
 }
-
-
-/* =========================================================
-   Toast
-   ========================================================= */
 
 function showToast(message) {
-
-  const toast =
-    document.getElementById("toast");
-
+  const toast = document.getElementById("toast");
   toast.textContent = message;
-
   toast.classList.add("show");
-
   setTimeout(() => {
-
     toast.classList.remove("show");
-
   }, 3500);
-
 }
 
-
-/* =========================================================
-   Mobile Menu
-   ========================================================= */
-
-const mobileMenu =
-  document.getElementById("mobileMenu");
-
-const mainNav =
-  document.getElementById("mainNav");
-
+const mobileMenu = document.getElementById("mobileMenu");
+const mainNav = document.getElementById("mainNav");
 
 mobileMenu.addEventListener("click", () => {
-
   mainNav.classList.toggle("open");
-
-  mobileMenu.textContent =
-    mainNav.classList.contains("open")
-      ? "✕"
-      : "☰";
-
+  mobileMenu.textContent = mainNav.classList.contains("open") ? "✕" : "☰";
 });
 
-
-document
-  .querySelectorAll("#mainNav a")
-  .forEach(link => {
-
-    link.addEventListener("click", () => {
-
-      mainNav.classList.remove("open");
-
-      mobileMenu.textContent = "☰";
-
-    });
-
+document.querySelectorAll("#mainNav a").forEach(link => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+    mobileMenu.textContent = "☰";
   });
+});
 
-
-/* =========================================================
-   Booking Tabs
-   ========================================================= */
-
-const tabs =
-  document.querySelectorAll(".tab");
-
-const forms =
-  document.querySelectorAll(".booking-form");
-
+const tabs = document.querySelectorAll(".tab");
+const forms = document.querySelectorAll(".booking-form");
 
 tabs.forEach(tab => {
-
   tab.addEventListener("click", () => {
-
-    tabs.forEach(t =>
-      t.classList.remove("active")
-    );
-
-    forms.forEach(form =>
-      form.classList.remove("active")
-    );
-
+    tabs.forEach(t => t.classList.remove("active"));
+    forms.forEach(form => form.classList.remove("active"));
     tab.classList.add("active");
 
-    const target =
-      document.getElementById(
-        tab.dataset.tab + "Form"
-      );
-
+    const target = document.getElementById(tab.dataset.tab + "Form");
     if (target) {
       target.classList.add("active");
     }
-
   });
-
 });
 
+/* HOTEL BOOKING */
+document.getElementById("hotelForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-/* =========================================================
-   HOTEL BOOKING
-   ========================================================= */
+  const city = document.getElementById("hotelCity").value.trim();
+  const checkin = document.getElementById("checkin").value;
+  const checkout = document.getElementById("checkout").value;
+  const rooms = document.getElementById("rooms").value;
+  const guests = document.getElementById("guests").value;
+  const customer = document.getElementById("hotelCustomer").value.trim();
+  const phone = document.getElementById("hotelPhone").value.trim();
+  const notes = document.getElementById("hotelNotes").value.trim();
 
-document
-  .getElementById("hotelForm")
-  .addEventListener("submit", function(e) {
+  if (!city) {
+    showToast("يرجى كتابة المدينة أو اسم الفندق.");
+    document.getElementById("hotelCity").focus();
+    return;
+  }
 
-    e.preventDefault();
-
-    const city =
-      document
-        .getElementById("hotelCity")
-        .value.trim();
-
-    const checkin =
-      document.getElementById("checkin").value;
-
-    const checkout =
-      document.getElementById("checkout").value;
-
-    const rooms =
-      document.getElementById("rooms").value;
-
-    const guests =
-      document.getElementById("guests").value;
-
-    const customer =
-      document
-        .getElementById("hotelCustomer")
-        .value.trim();
-
-    const phone =
-      document
-        .getElementById("hotelPhone")
-        .value.trim();
-
-    const notes =
-      document
-        .getElementById("hotelNotes")
-        .value.trim();
-
-
-    if (!city) {
-
-      showToast(
-        "يرجى كتابة المدينة أو اسم الفندق."
-      );
-
-      document
-        .getElementById("hotelCity")
-        .focus();
-
-      return;
-
-    }
-
-
-    const message =
+  const message =
 `🏨 *طلب حجز فندق - فلاي مسار*
 
 👤 اسم العميل:
@@ -2798,71 +2674,29 @@ ${notes || "لا توجد"}
 
 شكراً فلاي مسار ✈️`;
 
-    openWhatsApp(message);
+  openWhatsApp(message);
+});
 
-  });
+/* FLIGHT BOOKING */
+document.getElementById("flightForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
+  const from = document.getElementById("fromCity").value.trim();
+  const to = document.getElementById("toCity").value.trim();
+  const flightDate = document.getElementById("flightDate").value;
+  const returnDate = document.getElementById("returnDate").value;
+  const passengers = document.getElementById("passengers").value;
+  const classType = document.getElementById("classType").value;
+  const customer = document.getElementById("flightCustomer").value.trim();
+  const phone = document.getElementById("flightPhone").value.trim();
+  const notes = document.getElementById("flightNotes").value.trim();
 
-/* =========================================================
-   FLIGHT BOOKING
-   ========================================================= */
+  if (!from || !to) {
+    showToast("يرجى كتابة مدينة المغادرة والوجهة.");
+    return;
+  }
 
-document
-  .getElementById("flightForm")
-  .addEventListener("submit", function(e) {
-
-    e.preventDefault();
-
-    const from =
-      document
-        .getElementById("fromCity")
-        .value.trim();
-
-    const to =
-      document
-        .getElementById("toCity")
-        .value.trim();
-
-    const flightDate =
-      document.getElementById("flightDate").value;
-
-    const returnDate =
-      document.getElementById("returnDate").value;
-
-    const passengers =
-      document.getElementById("passengers").value;
-
-    const classType =
-      document.getElementById("classType").value;
-
-    const customer =
-      document
-        .getElementById("flightCustomer")
-        .value.trim();
-
-    const phone =
-      document
-        .getElementById("flightPhone")
-        .value.trim();
-
-    const notes =
-      document
-        .getElementById("flightNotes")
-        .value.trim();
-
-
-    if (!from || !to) {
-
-      showToast(
-        "يرجى كتابة مدينة المغادرة والوجهة."
-      );
-
-      return;
-
-    }
-
-
-    const message =
+  const message =
 `✈️ *طلب حجز طيران - فلاي مسار*
 
 👤 اسم العميل:
@@ -2896,17 +2730,10 @@ ${notes || "لا توجد"}
 
 شكراً فلاي مسار ✈️`;
 
-    openWhatsApp(message);
-
-  });
-
-
-/* =========================================================
-   OFFERS
-   ========================================================= */
+  openWhatsApp(message);
+});
 
 function offerWhatsApp(offerName) {
-
   const message =
 `مرحباً فلاي مسار 👋
 
@@ -2919,283 +2746,108 @@ function offerWhatsApp(offerName) {
 شكراً ✈️`;
 
   openWhatsApp(message);
-
 }
 
+document.querySelectorAll(".faq-question").forEach(question => {
+  question.addEventListener("click", () => {
+    const item = question.closest(".faq-item");
+    const wasOpen = item.classList.contains("open");
 
-/* =========================================================
-   FAQ
-   ========================================================= */
+    document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("open"));
 
-document
-  .querySelectorAll(".faq-question")
-  .forEach(question => {
-
-    question.addEventListener("click", () => {
-
-      const item =
-        question.closest(".faq-item");
-
-      const wasOpen =
-        item.classList.contains("open");
-
-      document
-        .querySelectorAll(".faq-item")
-        .forEach(i =>
-          i.classList.remove("open")
-        );
-
-      if (!wasOpen) {
-        item.classList.add("open");
-      }
-
-    });
-
+    if (!wasOpen) {
+      item.classList.add("open");
+    }
   });
+});
 
-
-/* =========================================================
-   DATE VALIDATION
-   ========================================================= */
-
-const checkin =
-  document.getElementById("checkin");
-
-const checkout =
-  document.getElementById("checkout");
-
-const flightDate =
-  document.getElementById("flightDate");
-
-const returnDate =
-  document.getElementById("returnDate");
-
+const checkin = document.getElementById("checkin");
+const checkout = document.getElementById("checkout");
+const flightDate = document.getElementById("flightDate");
+const returnDate = document.getElementById("returnDate");
 
 function getToday() {
-
   const now = new Date();
-
-  const year =
-    now.getFullYear();
-
-  const month =
-    String(now.getMonth() + 1)
-      .padStart(2,"0");
-
-  const day =
-    String(now.getDate())
-      .padStart(2,"0");
-
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2,"0");
+  const day = String(now.getDate()).padStart(2,"0");
   return `${year}-${month}-${day}`;
-
 }
 
-
 const today = getToday();
-
 checkin.min = today;
 checkout.min = today;
 flightDate.min = today;
 returnDate.min = today;
 
-
 checkin.addEventListener("change", () => {
-
   checkout.min = checkin.value;
-
-  if (
-    checkout.value &&
-    checkout.value < checkin.value
-  ) {
-
+  if (checkout.value && checkout.value < checkin.value) {
     checkout.value = "";
-
   }
-
 });
-
 
 flightDate.addEventListener("change", () => {
-
   returnDate.min = flightDate.value;
-
-  if (
-    returnDate.value &&
-    returnDate.value < flightDate.value
-  ) {
-
+  if (returnDate.value && returnDate.value < flightDate.value) {
     returnDate.value = "";
-
   }
-
 });
-
-
-/* =========================================================
-   PRIVACY / TERMS
-   ========================================================= */
 
 function scrollToSection(id) {
-
-  const element =
-    document.getElementById(id);
-
+  const element = document.getElementById(id);
   if (element) {
-
-    element.scrollIntoView({
-      behavior: "smooth"
-    });
-
+    element.scrollIntoView({ behavior: "smooth" });
   }
-
 }
-
 
 function showTerms() {
-
-  document
-    .getElementById("termsModal")
-    .classList.add("show");
-
+  document.getElementById("termsModal").classList.add("show");
   document.body.classList.add("modal-open");
-
 }
-
 
 function closeTerms() {
-
-  document
-    .getElementById("termsModal")
-    .classList.remove("show");
-
+  document.getElementById("termsModal").classList.remove("show");
   document.body.classList.remove("modal-open");
-
 }
 
-
-document
-  .getElementById("termsModal")
-  .addEventListener("click", function(e) {
-
-    if (e.target === this) {
-      closeTerms();
-    }
-
-  });
-
-
-/* =========================================================
-   LANGUAGE SWITCH
-   =========================================================
-
-   هذه النسخة تجهز زر اللغة.
-   يمكن تطوير جميع النصوص إلى ترجمة كاملة لاحقاً.
-   ========================================================= */
-
-const languageBtn =
-  document.getElementById("languageBtn");
-
-languageBtn.addEventListener("click", () => {
-
-  const current =
-    document.documentElement.lang;
-
-  if (current === "ar") {
-
-    document.documentElement.lang = "en";
-
-    document.documentElement.dir = "ltr";
-
-    languageBtn.textContent = "العربية";
-
-    showToast(
-      "English mode activated"
-    );
-
-  } else {
-
-    document.documentElement.lang = "ar";
-
-    document.documentElement.dir = "rtl";
-
-    languageBtn.textContent = "English";
-
-    showToast(
-      "تم تفعيل اللغة العربية"
-    );
-
+document.getElementById("termsModal").addEventListener("click", function(e) {
+  if (e.target === this) {
+    closeTerms();
   }
-
 });
 
+const languageBtn = document.getElementById("languageBtn");
+languageBtn.addEventListener("click", () => {
+  const current = document.documentElement.lang;
+  if (current === "ar") {
+    document.documentElement.lang = "en";
+    document.documentElement.dir = "ltr";
+    languageBtn.textContent = "العربية";
+    showToast("English mode activated");
+  } else {
+    document.documentElement.lang = "ar";
+    document.documentElement.dir = "rtl";
+    languageBtn.textContent = "English";
+    showToast("تم تفعيل اللغة العربية");
+  }
+});
 
-/* =========================================================
-   SMOOTH BOOKING
-   ========================================================= */
-
-document
-  .querySelectorAll('a[href="#booking"]')
-  .forEach(link => {
-
-    link.addEventListener("click", () => {
-
-      setTimeout(() => {
-
-        const booking =
-          document.getElementById("booking");
-
-        if (booking) {
-
-          booking.scrollIntoView({
-            behavior: "smooth"
-          });
-
-        }
-
-      },50);
-
-    });
-
+document.querySelectorAll('a[href="#booking"]').forEach(link => {
+  link.addEventListener("click", () => {
+    setTimeout(() => {
+      const booking = document.getElementById("booking");
+      if (booking) {
+        booking.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 50);
   });
+});
 
-
-/* =========================================================
-   FUTURE REAL BOOKING API
-   =========================================================
-
-   عند ربط الموقع بمزود حجوزات فعلي يمكن استخدام
-   هذه المنطقة لإرسال بيانات الحجز إلى API.
-
-   مثال:
-
-   fetch("YOUR_BOOKING_API_URL", {
-     method: "POST",
-     headers: {
-       "Content-Type": "application/json"
-     },
-     body: JSON.stringify({
-       from,
-       to,
-       flightDate,
-       returnDate
-     })
-   });
-
-   مهم:
-   لا تضع API KEY السري داخل HTML.
-   يجب أن يكون المفتاح في Backend / Server.
-   ========================================================= */
-
-
-/* =========================================================
-   CONSOLE
-   ========================================================= */
-
-console.log(
-  "Fly Masaar website loaded successfully ✈️"
-);
-
+console.log("Fly Masaar website loaded successfully ✈️");
 </script>
 
 </body>
-                   </html>
+</html>
+
+   
